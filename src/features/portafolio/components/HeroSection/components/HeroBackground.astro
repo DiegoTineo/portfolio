@@ -1,0 +1,41 @@
+---
+import { Image } from "astro:assets";
+import bg from "@/assets/backgrounds/bg6.gif";
+import bg2 from "@/assets/backgrounds/hero.gif";
+import { cn } from "@/shared/lib/utils";
+
+let OPCION = 1 
+---
+
+<div class="w-full h-full overflow-hidden">
+  
+  {
+    OPCION === 1 && (
+      <Image 
+        src={bg} alt="Hero Background" 
+        class="w-full h-full object-cover brightness-20 scale-150 md:scale-100 invert dark:invert-0 grayscale"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute top-0 w-full h-full bg-linear-to-b from-white/80 dark:from-blue-900/60 to-white dark:to-black" />
+    )
+  }
+    
+  {
+    OPCION === 2 && (
+      <Image 
+        src={bg2} alt="Hero Background " 
+        class={cn(`
+          w-full h-full object-cover 
+          brightness-80 dark:brightness-20   
+          -hue-rotate-300 dark:hue-rotate-250 
+          saturate-100 dark:saturate-1000
+          invert dark:invert-0
+        `)}
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute top-0 w-full h-full bg-linear-to-b from-transparent dark:from-blue-500/10 to-background backdrop-blur-md" />
+    )
+  }
+</div>

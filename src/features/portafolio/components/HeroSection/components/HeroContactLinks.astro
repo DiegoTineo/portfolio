@@ -1,0 +1,44 @@
+---
+import ContactButton from "@/shared/components/ContactButtons/ContactButton.astro";
+import { FaGithub, FaLinkedin, FaRegFilePdf } from "react-icons/fa";
+
+const buttons = [
+  {
+    label: "Linkedin",
+    href: "https://www.linkedin.com/in/diego-tineo-4a0526137/",
+    icon: FaLinkedin,
+    className:
+      "bg-blue-600 text-white border-blue-800 shadow-4xl hover:shadow-blue-400/50",
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/diegotineo",
+    icon: FaGithub,
+    className:
+      "bg-gray-800 text-white border-black dark:bg-white dark:text-black dark:border-gray-400",
+  },
+  {
+    label: "Curriculum PDF",
+    href: "/cv.pdf",
+    icon: FaRegFilePdf,
+    className: "bg-red-600 text-white border-red-800",
+  },
+];
+---
+
+<div class="flex flex-wrap items-center justify-center gap-4">
+  {
+    buttons.map((button) => {
+      const Icon = button.icon;
+      return (
+        <ContactButton
+          label={button.label}
+          href={button.href}
+          className={button.className}
+        >
+          <Icon slot="icon" />
+        </ContactButton>
+      );
+    })
+  }
+</div>

@@ -1,0 +1,54 @@
+---
+import "../shared/styles/global.css";
+import { PREFERED_DEV_THEME } from "../shared/stores/themeStore";
+const { content } = Astro.props;
+---
+
+<html lang="en">
+	
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		<title>Diego Tineo | Full Stack Developer</title>
+
+		<!-- 
+			is:inline:
+				Ejecución Inmediata: Este script decide si la página debe ser oscura o clara mirando el localStorage.
+				Sin Bloqueos: Al estar en el <head> con is:inline, el navegador lo lee y lo ejecuta antes de empezar a dibujar el <body>.
+				Resultado: Si el tema es oscuro, añade la clase .dark al instante. Si no usaras is:inline, Astro movería el script al final de la página. El usuario vería la página en blanco (tema claro) por un milisegundo y de repente "saltaría" a negro cuando el script termine de cargar al final. Ese parpadeo es lo que evitas.
+		-->
+
+		<script is:inline define:vars={{ PREFERED_DEV_THEME }}>
+			const theme = (() => {
+				if (
+					typeof localStorage !== "undefined" &&
+					localStorage.getItem("theme")
+				) {
+					return localStorage.getItem("theme");
+				}
+
+				if (PREFERED_DEV_THEME) {
+					return PREFERED_DEV_THEME;
+				}
+
+				if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+					return "dark";
+				}
+				return "light";
+			})();
+
+			if (theme === "light") {
+				document.documentElement.classList.remove("dark");
+			} else {
+				document.documentElement.classList.add("dark");
+			}
+		</script>
+		
+	</head>
+
+	<body class="bg-background text-foreground transition-colors duration-75">
+		<slot />
+	</body>
+</html>

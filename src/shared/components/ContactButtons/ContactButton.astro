@@ -1,0 +1,25 @@
+---
+interface Props {
+  label: string;
+  href?: string;
+  size?: "xs" | "sm" | "md" | "lg";
+  className?: string;
+}
+
+const {
+  label,
+  href = "Descripción predeterminada",
+  size = "xs",
+  className = "",
+} = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class={`cursor-pointer transition-all px-4 py-2 rounded-lg border-b-[6px] active:border-b-4 hover:brightness-100 hover:-translate-y-px active:brightness-90 active:translate-y-0.5 font-semibold flex items-center justify-center gap-1 ${className} ${size === "xs" ? "text-xs" : size === "sm" ? "text-sm" : size === "lg" ? "text-lg" : "text-md"}`}
+>
+  <slot name="icon" />
+  <span>{label}</span>
+</a>

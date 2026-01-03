@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import avatar from "@/assets/photos/avatar.png";
+
+import HeroBackground from "./components/HeroBackground.astro";
+import HeroContactLinks from "./components/HeroContactLinks.astro";
+---
+
+<section class="relative w-full min-h-svh">
+  <!-- background -->
+  <div class="z-10 absolute top-0 left-0 w-full h-full">
+    <HeroBackground />
+  </div>
+
+  <!-- content -->
+  <div
+    class="flex flex-col justify-center items-center lg:justify-evenly md:flex-row z-20 absolute top-0 left-0 w-full h-full"
+  >
+    <!-- main -->
+    <div
+      class="flex flex-col items-center justify-center w-xs lg:w-md bg-background/50 dark:bg-background/70 rounded-xl p-5"
+    >
+      <div class="flex md:hidden mb-5">
+        <Image
+          src={avatar}
+          alt="Avatar"
+          class="w-45 h-45 rounded-full bg-linear-to-b from-transparent to-background/90 backdrop-blur-lg"
+        />
+      </div>
+
+      <h1 class="tracking-tight text-5xl lg:text-8xl font-extrabold text-blue-500bg-amber-50 w-xs text-center text-blue-500">
+        DIEGO <br class="hidden lg:block"/> TINEO
+      </h1>
+      <h2 class="text-2xl lg:text-4xl font-semibold text-foreground">
+        Full stack Engineer
+      </h2>
+
+      <p class="my-5 text-sm lg:text-xl text-center">
+        <!-- Construyo sistemas donde la precisión técnica se encuentra con la eficiencia y la experiencia del usuario -->
+        Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial. Modernizo arquitecturas legacy y construyo infraestructuras escalables donde la fiabilidad no es negociable.
+      </p>
+
+      <HeroContactLinks />
+    </div>
+
+    <!-- avatar -->
+    <div class="hidden md:flex p-2 bg-black/50 rounded-full">
+      <Image
+        src={avatar}
+        alt="Avatar"
+        class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-linear-to-b from-transparent to-background/90 backdrop-blur-lg p-5"
+      />
+    </div>
+  </div>
+</section>
