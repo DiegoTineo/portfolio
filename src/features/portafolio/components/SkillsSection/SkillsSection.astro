@@ -1,13 +1,6 @@
 ---
 import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
 
-// Frontend (Interfaces de Precisión): Next.js, React, TypeScript, Tailwind CSS, Material UI, PWA (Offline-first).
-
-// Backend (Lógica de Misión Crítica): Node.js, Python (Flask), Nest.js, GraphQL, WebSockets, APIs RESTful.
-
-// Data & Resiliencia: PostgreSQL, MySQL, Redis, Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).
-
-// DevOps & Infraestructura: Docker (Optimización de imágenes), GitHub Actions (CI/CD), Gestión de VPS Linux, Nginx (Reverse Proxy), SSL.
 import { SiNextdotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { SiAstro } from "react-icons/si";
@@ -41,83 +34,88 @@ import { SiApache } from "react-icons/si";
 import { DiNginx } from "react-icons/di";
 import { FaLinux } from "react-icons/fa";
 import { SiGrafana } from "react-icons/si";
+
+const SKILLS_DATA = [
+  {
+    title: "Frontend (Interfaces de Precisión)",
+    description:
+      "Next.js, React, Astro, javascript, TypeScript, CSS, Tailwind, Motion, Material UI, shadcn. PWA, SPA, SSG, SSR, SSE.",
+    skills: [
+      { Icon: SiNextdotjs, color: "hover:text-slate-200" },
+      { Icon: FaReact, color: "text-[#61DAFB]" },
+      { Icon: SiAstro, color: "text-[#FF5D01]" },
+      { Icon: IoLogoJavascript, color: "text-[#F7DF1E]" },
+      { Icon: SiTypescript, color: "text-[#3178C6]" },
+      { Icon: FaCss3, color: "text-[#1572B6]" },
+      { Icon: RiTailwindCssFill, color: "text-[#06B6D4]" },
+      { Icon: SiMui, color: "text-[#007FFF]" },
+      { Icon: SiShadcnui, color: "hover:text-slate-200" },
+    ],
+  },
+  {
+    title: "Backend (Lógica de Misión Crítica)",
+    description:
+      "Python (Flask, FastAPI, Django), Node.js (Nest.js, Express.js), Go(Golang). GraphQL, Apollo, WebSockets, Webhooks, APIs RESTful.",
+    skills: [
+      { Icon: FaPython, color: "text-[#3776AB]" },
+      { Icon: SiFlask, color: "hover:text-slate-200" },
+      { Icon: SiFastapi, color: "text-[#05998B]" },
+      { Icon: DiDjango, color: "text-[#339933]" },
+      { Icon: FaNodeJs, color: "text-[#339933]" },
+      { Icon: SiNestjs, color: "text-[#E0234E]" },
+      { Icon: SiExpress, color: "hover:text-slate-200" },
+      { Icon: GrGraphQl, color: "text-[#E10098]" },
+      { Icon: SiApollographql, color: "text-[#311C87]" },
+      { Icon: FaGolang, color: "text-[#00ADD8]" },
+    ],
+  },
+  {
+    title: "Data",
+    description:
+      "PostgreSQL, MySQL, MariaDB, Redis, Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).",
+    skills: [
+      { Icon: BiLogoPostgresql, color: "text-[#4169E1]" },
+      { Icon: SiMysql, color: "text-[#4479A1]" },
+      { Icon: SiMariadb, color: "text-[#003545]" },
+      { Icon: SiRedis, color: "text-[#DC382D]" },
+    ],
+  },
+  {
+    title: "DevOps/Infraestructura",
+    description:
+      "Docker, Docker Compose, GitHub Actions (CI/CD), Grafana, PM2, Gestión de VPS Linux, Nginx (Reverse Proxy), Apache, SSL.",
+    skills: [
+      { Icon: FaDocker, color: "text-[#2496ED]" },
+      { Icon: FaGithub, color: "hover:text-slate-200" },
+      { Icon: SiApache, color: "text-[#D22128]" },
+      { Icon: DiNginx, color: "text-[#009639]" },
+      { Icon: SiGrafana, color: "text-[#F46800]" },
+      { Icon: SiPm2, color: "text-[#2B037A]" },
+      { Icon: FaLinux, color: "text-[#FCC624]" },
+    ],
+  },
+];
 ---
 
 <section class="w-full container mx-auto p-4">
-  <!-- <h1 class="text-4xl font-bold">Tech Stack:</h1> -->
   <SectionTitle title="Tech Stack:" client:load />
 
-  <div class="flex flex-col text-sm my-3 px-4 md:px-0 gap-8 w-full">
-    <div class="flex flex-col gap-2">
-      <p>
-        <b class="font-bold text-sky-400">Frontend (Interfaces de Precisión):</b
-        > Next.js, React, Astro, javascript, TypeScript, CSS, Tailwind, Motion, Material
-        UI, shadcn. PWA, SPA, SSG, SSR, SSE.
-      </p>
-
-      <div class="flex gap-2 text-2xl">
-        <SiNextdotjs />
-        <FaReact />
-        <SiAstro />
-        <IoLogoJavascript />
-        <SiTypescript />
-        <FaCss3 />
-        <RiTailwindCssFill />
-        <SiMui />
-        <SiShadcnui />
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <p>
-        <b class="font-bold text-sky-400">Backend (Lógica de Misión Crítica):</b
-        >
-        Python (Flask, FastAPI, Django), Node.js (Nest.js, Express.js), Go(Golang).
-        GraphQL, Apollo, WebSockets, Webhooks, APIs RESTful.
-      </p>
-      <div class="flex gap-2 text-2xl">
-        <FaPython />
-        <SiFlask />
-        <SiFastapi />
-        <DiDjango />
-        <FaNodeJs />
-        <SiNestjs />
-        <SiExpress />
-        <GrGraphQl />
-        <SiApollographql />
-        <FaGolang />
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <p>
-        <b class="font-bold text-sky-400">Data:</b> PostgreSQL, MySQL, MariaDB, Redis,
-        Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).
-      </p>
-      <div class="flex gap-2 text-2xl">
-        <BiLogoPostgresql />
-        <SiMysql />
-        <SiMariadb />
-        <SiRedis />
-      </div>
-    </div>
-
-    <div class="flex flex-col gap-2">
-      <p>
-        <b class="font-bold text-sky-400">DevOps/Infraestructura:</b> Docker, Docker
-        Compose, GitHub Actions (CI/CD), Grafana, PM2, Gestión de VPS Linux, Nginx
-        (Reverse Proxy), Apache, SSL.
-      </p>
-      <div class="flex gap-2 text-2xl">
-        <FaDocker />
-        <FaGithub />
-        <SiApache />
-        <DiNginx />
-        <SiGrafana />
-        <SiPm2 />
-        <FaLinux />
-      </div>
-    </div>
-
+  <div class="flex flex-col lg:flex-row lg:flex-wrap text-sm my-3 px-4 md:px-0 gap-8 w-full mt-8">
+    {
+      SKILLS_DATA.map(({ title, description, skills }) => (
+        <div class="flex flex-col gap-2 w-xs h-40">
+          <h3 class="text-2xl font-bold text-sky-400">{title}:</h3>
+          <p>{description}</p>
+          
+          <div class="flex gap-4 text-3xl">
+            {skills.map(({ Icon, color }) => (
+              <Icon
+                className={`${color} text-xl transition-all duration-300 hover:scale-125 cursor-default drop-shadow-sm hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.3)]`}
+              />
+            ))}
+          </div>
+        </div>
+      ))
+    }
   </div>
 </section>

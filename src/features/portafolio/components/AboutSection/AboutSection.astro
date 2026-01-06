@@ -1,6 +1,21 @@
 ---
 import { MotionLine } from "@/shared/components/MotionLine/MotionLine";
 import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
+
+const highlights = [
+  {
+    title: "Ingeniería de Resiliencia:",
+    description: "Diseño sistemas escalables, auditables y de alta disponibilidad, garantizando la integridad de los datos."
+  },
+  {
+    title: "Modernización de Infraestructura:",
+    description: "Experiencia transformando sistemas obsoletos en arquitecturas modernas mediante la optimización de CI/CD y la containerización estratégica (Docker)."
+  },
+  {
+    title: "Precisión Visual (UX/UI):",
+    description: "Implementación técnica rigurosa de interfaces, asegurando que la complejidad del backend se traduzca en una experiencia de usuario fluida y eficiente."
+  }
+];
 ---
 
 <section
@@ -13,34 +28,17 @@ import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
       <MotionLine client:load />
 
       <div class="flex flex-col lg:flex-row w-full gap-5">
-        <div >
-          <h3 class="text-sky-400 font-bold">Ingeniería de Resiliencia:</h3>
-          <p >
-            Diseño sistemas escalables, auditables y de alta disponibilidad,
-            garantizando la integridad de los datos.
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-sky-400 font-bold">Modernización de Infraestructura:</h3>
-          <p>
-            Experiencia transformando sistemas obsoletos en arquitecturas modernas
-            mediante la optimización de CI/CD y la containerización estratégica (Docker).
-          </p>
-        </div>
-
-        <div>
-          <h3 class="text-sky-400 font-bold">Precisión Visual (UX/UI):</h3>
-          <p>
-            Implementación técnica rigurosa de interfaces, asegurando que la complejidad del backend
-            se traduzca en una experiencia de usuario fluida y eficiente.
-          </p>
-        </div>
+        {highlights.map((highlight) => (
+          <div>
+            <h3 class="text-sky-400 font-bold">{highlight.title}</h3>
+            <p>{highlight.description}</p>
+          </div>
+        ))}
       </div>
-      
     </div>
-
-    <!-- 
+  </div>
+</section>
+<!-- 
   <ul class="flex flex-col text-sm my-3 max-w-3xl px-4 md:px-0 gap-5">
     <li class="flex items-center gap-2">
       <div class="aspect-square w-5 rounded-sm bg-blue-500 flex items-center justify-center">4</div>
@@ -64,5 +62,3 @@ import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
     <li>Dockerización de aplicaciones (Ghcr, Dockerhub)</li>
     <li>experiencia en desarrollo web</li>
   </ul> -->
-  </div>
-</section>

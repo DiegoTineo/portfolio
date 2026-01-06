@@ -3,17 +3,19 @@ import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
 import { Timeline } from "./components/Timeline/Timeline";
 ---
 
-<section class="w-full container mx-auto p-4">
-  <SectionTitle title="Experiencia:" client:load />
+<section class="bg-linear-to-b from-transparent via-indigo-500/6 to-transparent">
+  <div class="w-full container mx-auto p-4">
+    <SectionTitle title="Experiencia:" client:load />
 
-  <div class="flex flex-col mt-5 px-2 gap-2">
-    <p>
-      <b class="text-sky-400 font-bold text-lg">4 años</b> de experiencia en el ciclo
-      de vida completo del software (SDLC): desde la arquitectura inicial, el desarrollo,
-      despliegue y el mantenimiento preventivo en entornos de producción.
-    </p>
+    <div class="flex flex-col mt-5 px-2 gap-2">
+      <p>
+        <b class="text-sky-400 font-bold text-lg">4 años</b> de experiencia en el
+        ciclo de vida completo del software (SDLC): desde la arquitectura inicial,
+        el desarrollo, despliegue y el mantenimiento preventivo en entornos de producción.
+      </p>
+    </div>
+  </div>
+  <div class="container mx-auto mt-8">
+    <Timeline client:load />
   </div>
 </section>
-<div class="container mx-auto">
-  <Timeline client:load />
-</div>

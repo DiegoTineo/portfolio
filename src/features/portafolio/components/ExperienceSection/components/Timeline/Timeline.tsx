@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import { MotionLine } from '@/shared/components/MotionLine/MotionLine';
 import { TimelineStep } from './components/TimelineStep';
+import { cn } from '@/shared/lib/utils';
 
 const EXPERIENCE_ITEMS = [
   {
@@ -50,14 +51,14 @@ export const Timeline = () => {
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
-    <div className="flex ">
+    <div className="flex">
       <div className='flex translate-x-8'>
         <MotionLine />
       </div>
 
       <div ref={containerRef} className='flex flex-col'>
-        {EXPERIENCE_ITEMS.map((experience) => (
-          <div key={experience.id} >
+        {EXPERIENCE_ITEMS.map((experience, index) => (
+          <div key={experience.id} className={cn(index > 0 ? 'mt-4' : '')}>
             <TimelineStep
               logo={experience.logo}
               title={experience.title}
