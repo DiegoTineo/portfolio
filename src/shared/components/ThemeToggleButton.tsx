@@ -18,7 +18,7 @@ export const ThemeToggleButton = () => {
       onClick={toggleTheme}
       id="theme-toggle"
       variant="ghost"
-      className="rounded-full cursor-pointer active:scale-95 transition-transform duration-200 hover:scale-110"
+      className="bg-muted/50 rounded-full cursor-pointer active:scale-95 transition-transform duration-200 hover:scale-110"
       size="icon"
     >
       {/* Solo se muestra el icono cuando el componente se ha montado en el cliente */}

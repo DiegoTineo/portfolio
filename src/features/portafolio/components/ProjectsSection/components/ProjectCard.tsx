@@ -37,7 +37,7 @@ export const ProjectCard = ({
       </div>
 
       {/* DESCRIPCION */}
-      <div className='justify-between flex flex-col h-full'>
+      <div className='justify-between flex flex-col h-full min-h-80'>
         {/* TITULO Y DESCRIPCION */}
         <div className='mb-4 p-4 pb-0 '>
           <h3 className='text-xl font-bold mb-2'>

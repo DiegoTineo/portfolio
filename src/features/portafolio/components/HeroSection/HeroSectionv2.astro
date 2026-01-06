@@ -1,0 +1,67 @@
+---
+import HeroBackground from "./components/HeroBackgroundv2.astro";
+import HeroContactLinks from "./components/HeroContactLinks.astro";
+import AvatarPic from "./components/AvatarPic.astro";
+import { cn } from "@/shared/lib/utils";
+---
+
+<section class="relative w-full min-h-svh">
+  <!-- background -->
+  <div class="z-10 absolute top-0 left-0 w-full h-full">
+    <HeroBackground />
+  </div>
+
+  <!-- content -->
+  <div
+    class={cn(
+      `
+        container mx-auto
+        w-full min-h-svh
+        flex flex-col 
+        lg:flex-row-reverse
+
+        relative 
+        justify-center lg:justify-evenly
+        items-center 
+        z-20 
+      `,
+    )}
+  >
+    <!-- avatar -->
+    <div class="w-45 lg:w-96 xl:w-120 max-w-md rounded-full aspect-square">
+      <AvatarPic />
+    </div>
+
+    <!-- main content -->
+    <div
+      class="text-center mt-8 flex flex-col items-center lg:items-start lg:w-xl"
+    >
+      <h1 class="font-extrabold text-5xl text-blue-500 lg:text-8xl xl:text-9xl">
+        DIEGO <br class="hidden lg:block" /> TINEO
+      </h1>
+      <h2 class="font-bold text-3xl lg:text-5xl xl:text-6xl">
+        Full Stack Engineer
+      </h2>
+
+      <p
+        class={cn(
+          `
+          my-5 
+          text-sm md:text-base lg:text-2xl xl:text-2xl 
+          text-center lg:text-left 
+          max-w-xs lg:max-w-xl
+        `,
+        )}
+      >
+        <!-- Construyo sistemas donde la precisión técnica se encuentra con la eficiencia y la experiencia del usuario -->
+        Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial.
+        Modernizo arquitecturas legacy y construyo infraestructuras escalables donde
+        la fiabilidad no es negociable.
+      </p>
+
+      <div class="flex justify-start w-xs lg:w-full mt-4 mx-auto h-20">
+        <HeroContactLinks />
+      </div>
+    </div>
+  </div>
+</section>

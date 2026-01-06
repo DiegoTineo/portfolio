@@ -13,11 +13,11 @@ let OPCION = 1
     OPCION === 1 && (
       <Image 
         src={bg} alt="Hero Background" 
-        class="w-full h-full object-cover brightness-20 scale-150 md:scale-100 invert dark:invert-0 grayscale"
+        class="w-full h-full object-cover brightness-20 md:scale-100 invert dark:invert-0 grayscale"
         loading="eager"
         fetchpriority="high"
       />
-      <div class="absolute top-0 w-full h-full bg-linear-to-b from-white/80 dark:from-blue-900/60 to-white dark:to-black" />
+      <div class="absolute top-0 w-full h-full bg-linear-to-b from-white/80 dark:from-black/60 to-white dark:to-black backdrop-blur-xs" />
     )
   }
     

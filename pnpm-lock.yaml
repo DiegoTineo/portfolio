@@ -51,7 +51,7 @@ importers:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.3)
       motion:
-        specifier: ^12.23.26
+        specifier: ^12.23.12
         version: 12.23.26(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       nanostores:
         specifier: ^1.1.0

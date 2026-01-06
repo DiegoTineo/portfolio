@@ -1,4 +1,6 @@
 ---
+import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
+
 // Frontend (Interfaces de Precisión): Next.js, React, TypeScript, Tailwind CSS, Material UI, PWA (Offline-first).
 
 // Backend (Lógica de Misión Crítica): Node.js, Python (Flask), Nest.js, GraphQL, WebSockets, APIs RESTful.
@@ -6,17 +8,116 @@
 // Data & Resiliencia: PostgreSQL, MySQL, Redis, Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).
 
 // DevOps & Infraestructura: Docker (Optimización de imágenes), GitHub Actions (CI/CD), Gestión de VPS Linux, Nginx (Reverse Proxy), SSL.
+import { SiNextdotjs } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
+import { SiAstro } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaCss3 } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiMui } from "react-icons/si";
+import { SiShadcnui } from "react-icons/si";
 
+import { FaPython } from "react-icons/fa";
+import { SiFlask } from "react-icons/si";
+import { SiFastapi } from "react-icons/si";
+import { DiDjango } from "react-icons/di";
+import { FaNodeJs } from "react-icons/fa";
+import { SiNestjs } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
+import { GrGraphQl } from "react-icons/gr";
+import { SiApollographql } from "react-icons/si";
+
+import { BiLogoPostgresql } from "react-icons/bi";
+import { SiMysql } from "react-icons/si";
+import { SiMariadb } from "react-icons/si";
+import { SiRedis } from "react-icons/si";
+
+import { FaGithub } from "react-icons/fa";
+import { FaDocker } from "react-icons/fa";
+import { SiPm2 } from "react-icons/si";
+import { SiApache } from "react-icons/si";
+import { DiNginx } from "react-icons/di";
+import { FaLinux } from "react-icons/fa";
+import { SiGrafana } from "react-icons/si";
 ---
 
-
 <section class="w-full container mx-auto p-4">
-  <h1 class="text-4xl font-bold">Tech Stack & Capacidades:</h1>
+  <!-- <h1 class="text-4xl font-bold">Tech Stack:</h1> -->
+  <SectionTitle title="Tech Stack:" client:load />
 
-  <div class="flex flex-col text-sm my-3 px-4 md:px-0 gap-5 w-full">
-    <p><b class="font-bold text-sky-400">Frontend (Interfaces de Precisión):</b> Next.js, React, Astro, TypeScript, CSS, Tailwind CSS, Material UI, PWA, SPA, SSG, SSR.</p>
-    <p><b class="font-bold text-sky-400">Backend (Lógica de Misión Crítica):</b> Node.js, Python (Flask), Nest.js, GraphQL, WebSockets, APIs RESTful.</p>
-    <p><b class="font-bold text-sky-400">Data:</b> PostgreSQL, MySQL, Redis, Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).</p>
-    <p><b class="font-bold text-sky-400">DevOps/Infraestructura:</b> Docker, Docker Compose, GitHub Actions (CI/CD), Gestión de VPS Linux, Nginx (Reverse Proxy), Apache, SSL.</p>
+  <div class="flex flex-col text-sm my-3 px-4 md:px-0 gap-8 w-full">
+    <div class="flex flex-col gap-2">
+      <p>
+        <b class="font-bold text-sky-400">Frontend (Interfaces de Precisión):</b
+        > Next.js, React, Astro, javascript, TypeScript, CSS, Tailwind, Motion, Material
+        UI, shadcn. PWA, SPA, SSG, SSR, SSE.
+      </p>
+
+      <div class="flex gap-2 text-2xl">
+        <SiNextdotjs />
+        <FaReact />
+        <SiAstro />
+        <IoLogoJavascript />
+        <SiTypescript />
+        <FaCss3 />
+        <RiTailwindCssFill />
+        <SiMui />
+        <SiShadcnui />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <p>
+        <b class="font-bold text-sky-400">Backend (Lógica de Misión Crítica):</b
+        >
+        Python (Flask, FastAPI, Django), Node.js (Nest.js, Express.js), Go(Golang).
+        GraphQL, Apollo, WebSockets, Webhooks, APIs RESTful.
+      </p>
+      <div class="flex gap-2 text-2xl">
+        <FaPython />
+        <SiFlask />
+        <SiFastapi />
+        <DiDjango />
+        <FaNodeJs />
+        <SiNestjs />
+        <SiExpress />
+        <GrGraphQl />
+        <SiApollographql />
+        <FaGolang />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <p>
+        <b class="font-bold text-sky-400">Data:</b> PostgreSQL, MySQL, MariaDB, Redis,
+        Gestión de consistencia asíncrona (IndexedDB), Zod (Validación estricta).
+      </p>
+      <div class="flex gap-2 text-2xl">
+        <BiLogoPostgresql />
+        <SiMysql />
+        <SiMariadb />
+        <SiRedis />
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-2">
+      <p>
+        <b class="font-bold text-sky-400">DevOps/Infraestructura:</b> Docker, Docker
+        Compose, GitHub Actions (CI/CD), Grafana, PM2, Gestión de VPS Linux, Nginx
+        (Reverse Proxy), Apache, SSL.
+      </p>
+      <div class="flex gap-2 text-2xl">
+        <FaDocker />
+        <FaGithub />
+        <SiApache />
+        <DiNginx />
+        <SiGrafana />
+        <SiPm2 />
+        <FaLinux />
+      </div>
+    </div>
+
   </div>
 </section>

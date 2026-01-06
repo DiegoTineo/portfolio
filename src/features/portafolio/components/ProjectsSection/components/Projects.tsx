@@ -10,7 +10,7 @@ import { FcGoogle } from "react-icons/fc";
 import { SiTypescript } from "react-icons/si";
 import { ProjectCard, type ProjectCardProps } from "./ProjectCard";
 
-export const TECH = {
+const TECH = {
   NEXT: { name: "Next.js", icon: <SiNextdotjs className='text-foreground' />, color: 'text-foreground' },
   VITE: { name: "Vite", icon: <SiVite className='text-yellow-400' />, color: 'text-yellow-400' },
   REACT: { name: "React", icon: <FaReact className='text-sky-400' />, color: 'text-sky-400' },
@@ -45,10 +45,10 @@ const PROJECTS: ProjectCardProps[] = [
   {
     title: "WMS - Warehouse Management System",
     description: [
-      <p>
+      <p key={0}>
         <b className="font-bold text-sky-400">El Reto:</b> Garantizar la <b className="font-bold text-sky-400">trazabilidad total de activos</b> en almacenes de alta rotación, eliminando discrepancias entre el stock físico y el digital.
       </p>,
-      <p>
+      <p key={1}>
         <b className="font-bold text-sky-400">La Solución:</b> Sistema integral para la gestión de transferencias, despachos y mermas con auditoría en tiempo real. Implementado bajo una arquitectura que prioriza la consistencia de datos en operaciones logísticas complejas.
       </p>
     ],
@@ -82,8 +82,8 @@ const PROJECTS: ProjectCardProps[] = [
   {
     title: "Modern POS & Facturación Offline-First",
     description: [
-      <p><b className="font-bold text-sky-400">El Reto:</b> Garantizar la continuidad operativa de puntos de venta en entornos con conectividad inestable, donde una caída de internet significa pérdida de ventas.</p>,
-      <p><b className="font-bold text-sky-400">La Solución:</b> Desarrollo de una <b className="font-bold text-sky-400">PWA asíncrona</b> con gestión de base de datos local y sincronización diferida. El sistema permite facturar sin conexión y garantiza la integridad de los datos al sincronizarse con el servidor central mediante GraphQL, priorizando la consistencia y la velocidad de respuesta.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> Garantizar la continuidad operativa de sistemas de ventas en entornos con conectividad inestable, donde una caída de internet significa pérdida de ventas.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Desarrollo de una <b className="font-bold text-sky-400">PWA asíncrona</b> con gestión de base de datos local y sincronización diferida para permitir facturar sin conexión y garantizar la integridad de los datos, priorizando la consistencia de datos.</p>
     ],
     mainImage: "/images/projects/posreact.png",
     carousel: [
@@ -115,8 +115,8 @@ const PROJECTS: ProjectCardProps[] = [
   {
     title: "Conciliación de Pagos & Auditoría Bancaria",
     description: [
-      <p><b className="font-bold text-sky-400">El Reto:</b> Permitir la verificación de transacciones financieras (Pago Móvil) a personal operativo sin comprometer la seguridad de las credenciales bancarias de la empresa.</p>,
-      <p><b className="font-bold text-sky-400">La Solución:</b> Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias. Diseñada con validaciones estrictas para prevenir errores de registro y duplicidad de pagos.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> Permitir la verificación de transacciones financieras (Pago Móvil) a personal operativo sin comprometer la seguridad de las credenciales bancarias de la empresa.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias. Diseñada con validaciones estrictas para prevenir errores de registro y duplicidad de pagos.</p>
     ],
     mainImage: "/images/projects/pmvalidator.png",
     carousel: [
@@ -145,8 +145,8 @@ const PROJECTS: ProjectCardProps[] = [
   {
     title: "Estandarización de Impresoras Fiscales (Python API)",
     description: [
-      <p><b className="font-bold text-sky-400">El Reto:</b> La fragmentación de protocolos en hardware fiscal legacy que dificulta la integración con sistemas modernos.</p>,
-      <p><b className="font-bold text-sky-400">La Solución:</b> Capa de abstracción (Middleware) que unifica la comunicación con diversos modelos de impresoras fiscales mediante una API REST. Resuelve la complejidad de protocolos seriales y garantiza la emisión de documentos legales de forma estandarizada y segura.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> La fragmentación de protocolos en hardware fiscal legacy que dificulta la integración con sistemas modernos.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Capa de abstracción (Middleware) que unifica la comunicación con diversos modelos de impresoras fiscales mediante una API REST. Resuelve la complejidad de protocolos seriales y garantiza la emisión de documentos legales de forma estandarizada y segura.</p>
     ],
     mainImage: "/images/projects/pyapi.png",
 
@@ -183,7 +183,9 @@ export function Projects() {
 
     <div className='flex flex-wrap justify-center gap-10 w-full'>
       {PROJECTS.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <div key={index}>
+          <ProjectCard {...project} />
+        </div>
       ))}
     </div>
   )

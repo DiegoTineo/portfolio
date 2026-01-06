@@ -1,0 +1,25 @@
+---
+import { Image } from "astro:assets";
+import avatar from "@/assets/photos/avatar.png";
+import { cn } from "@/shared/lib/utils";
+---
+
+<div class="relative flex rounded-full">
+  <Image
+    src={avatar}
+    alt="Avatar"
+    class={cn(
+      `
+        w-56 lg:w-100 xl:w-120
+        aspect-square 
+        rounded-full 
+        md:bg-deep-background
+        bg-linear-to-b 
+        from-blue-500 
+        to-black/80
+        backdrop-blur-lg
+      `
+    )}
+  />
+  <div class="absolute w-full h-full rounded-full bg-linear-to-b from-transparent to-indigo-500/5" />
+</div>

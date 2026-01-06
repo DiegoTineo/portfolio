@@ -42,6 +42,7 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-deep-background: var(--deep-background);
 }
 
 :root {
@@ -111,6 +112,14 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+:root {
+  --deep-background: oklch(100% 0.00011 271.152);
+}
+
+.dark {
+  --deep-background: oklch(0% 0 0);
 }
 
 @layer base {

@@ -1,37 +1,43 @@
 ---
 import { MotionLine } from "@/shared/components/MotionLine/MotionLine";
-
+import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
 ---
 
 <section
   class="w-full mx-auto p-4 bg-linear-to-b from-white dark:from-black to-background"
 >
   <div class="container mx-auto">
-    <h1 class="text-5xl font-bold">Sobre mí:</h1>
-
-    <!-- <div class="flex flex-col mt-5 px-2 gap-2">
-      <p>
-        Experiencia en el desarrollo de sistemas de misión crítica, trazabilidad industrial y modernización de infraestructuras legacy.
-      </p>
-      <p>
-        Mi enfoque no es solo escribir código, sino garantizar que cada sistema sea
-        escalable, resiliente, fiable y de alta calidad.
-      </p>
-    </div> -->
+    <SectionTitle title="Sobre mí:" client:load />
 
     <div class="flex my-6 gap-2">
       <MotionLine client:load />
-      <ul class="flex flex-col max-w-3xl md:px-0 gap-2 text-sm mt">
-        <li class="">
-          <b class="text-sky-400 font-bold">• Ingeniería de Resiliencia:</b> Mi enfoque va más allá del código. Diseño sistemas escalables, auditables y de alta disponibilidad, garantizando la integridad de los datos.
-        </li>
-        <li class="">
-          <b class="text-sky-400 font-bold">• Modernización de Infraestructura:</b> Experiencia transformando sistemas obsoletos en arquitecturas modernas mediante la optimización de CI/CD y la containerización estratégica (Docker).
-        </li>
-        <li class="">
-          <b class="text-sky-400 font-bold">• Precisión Visual (UX/UI):</b> Implementación técnica rigurosa de interfaces, asegurando que la complejidad del backend se traduzca en una experiencia de usuario fluida y eficiente.
-        </li>
-      </ul>
+
+      <div class="flex flex-col lg:flex-row w-full gap-5">
+        <div >
+          <h3 class="text-sky-400 font-bold">Ingeniería de Resiliencia:</h3>
+          <p >
+            Diseño sistemas escalables, auditables y de alta disponibilidad,
+            garantizando la integridad de los datos.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sky-400 font-bold">Modernización de Infraestructura:</h3>
+          <p>
+            Experiencia transformando sistemas obsoletos en arquitecturas modernas
+            mediante la optimización de CI/CD y la containerización estratégica (Docker).
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-sky-400 font-bold">Precisión Visual (UX/UI):</h3>
+          <p>
+            Implementación técnica rigurosa de interfaces, asegurando que la complejidad del backend
+            se traduzca en una experiencia de usuario fluida y eficiente.
+          </p>
+        </div>
+      </div>
+      
     </div>
 
     <!-- 
