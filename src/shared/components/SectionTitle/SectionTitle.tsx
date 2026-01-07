@@ -16,7 +16,7 @@ export const SectionTitle = ({title}: SectionTitleProps) => {
         animateOn="view"
         sequential 
         characters={CHARACTERS} 
-        speed={70} 
+        speed={60} 
 
       />
     </div>

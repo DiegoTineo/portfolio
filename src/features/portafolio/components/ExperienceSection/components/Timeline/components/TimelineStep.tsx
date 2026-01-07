@@ -45,7 +45,7 @@ export const TimelineStep: React.FC<TimelineStepProps> = ({
 
         <div className="flex px-7 ml-4">
           <div className="w-full md:w-1/2 px-1 my-5">
-            <ul className="space-y-3 text-sm leading-relaxed">
+            <ul className="space-y-3 text-sm leading-relaxed flex flex-col gap-2">
               {(items ? items : []).map((item, index) => (
                 <li key={index} className="">
                   {item.text}

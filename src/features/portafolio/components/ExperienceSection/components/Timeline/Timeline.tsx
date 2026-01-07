@@ -13,35 +13,88 @@ const EXPERIENCE_ITEMS = [
     link: "https://aftim.com",
     items: [
       {
-        text: <span><b className='font-bold text-sky-400'>• Ingeniería de Producto:</b> Lideré el desarrollo y mantenimiento de ecosistemas empresariales <b className='font-bold text-sky-400'>(ERP, POS, CRM, WMS)</b> bajo arquitecturas de microservicios, priorizando la integridad de datos transaccionales y la escalabilidad del sistema.</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Ingeniería de Producto y Microservicios: </h4>
+            <p>
+              {/* Desarrollo de sistemas ERP, POS y WMS multitenant con <b>Node.js</b> y <b>Python</b>. Integración de flujos en tiempo real (WebSockets, GraphQL) y garantía de la integridad de datos en <b>DBs SQL</b>. */}
+              Desarrollo de sistemas <b>ERP, POS, CRM y WMS</b> multitenant con <b>Node.js y Python</b> integrando modulos bidireccionales en tiempo real <b>(WebSockets, GraphQL)</b>.
+            </p>
+          </span>
+      },
+      // {
+      //   text:
+      //     <span className='flex flex-col'>
+      //       <h4 className='font-bold text-sky-400'>• Sistemas de Tiempo Real: </h4>
+      //       <p>
+      //         Implementación de flujos bidireccionales <b>(WebSockets, GraphQL)</b> en entornos concurrentes.
+      //       </p>
+      //     </span>
+      // },
+      {
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Modernización y Coexistencia Legacy: </h4>
+            <p>
+              Extensión de funcionalidades de un ERP core <b>(PHP 5.6)</b> mediante microservicios y tokens <b>JWT</b>, implementando subdominios y el patrón <b>Strangler Fig</b>.
+            </p>
+          </span>
       },
       {
-        text: <span><b className='font-bold text-sky-400'>• Comunicaciones en Tiempo Real:</b> Implementé flujos de datos bidireccionales mediante <b className='font-bold text-sky-400'>WebSockets</b> y <b className='font-bold text-sky-400'>GraphQL</b>, optimizando la actualización de inventarios y ventas en tiempo real para entornos de alta transaccionalidad (Restaurantes/POS).</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Estrategia Offline-First y PWAs: </h4>
+            <p>
+              Diseño de interfaces resilientes con <b>React y Next.js</b>, eliminando la dependencia de conectividad y garantizando la continuidad operativa.
+            </p>
+          </span>
       },
       {
-        text: <span><b className='font-bold text-sky-400'>• Infraestructura y Resiliencia:</b> Diseñé una arquitectura de despliegue basada en <b className='font-bold text-sky-400'>Docker</b> y <b className='font-bold text-sky-400'>GHCR</b>, gestionando <b className='font-bold text-sky-400'>VPS Linux</b> con configuraciones de <b className='font-bold text-sky-400'>Reverse Proxy</b>, <b className='font-bold text-sky-400'>SSL</b> y <b className='font-bold text-sky-400'>pipelines de automatización</b> con <b className='font-bold text-sky-400'>GitHub Actions</b> (CI/CD).</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Infraestructura y DevOps:</h4>
+            <p>
+              Orquestación de contenedores con <b>Docker</b> y automatización de pipelines (CI/CD) mediante <b>GitHub Actions</b>, garantizando despliegues resilientes y alta disponibilidad.
+            </p>
+          </span>
       },
+
     ]
   },
   {
     id: 2,
     logo: "/logos/scav.png",
     title: "Desarrollador Backend",
-    company: "SCAV Parking",
+    company: "SCAV Parking - Alianza AFTIM",
     duration: "Enero 2022 - Marzo 2024",
     link: "https://scavparking.com",
     items: [
       {
-        text: <span><b className='font-bold text-sky-400'>Lógica de Control de Acceso:</b> Diseñé y desarrollé el núcleo del sistema (Python/Flask) para la automatización de barreras (balancines), integrando la validación de <b className='font-bold text-sky-400'>hardware</b> con la lógica de negocio en <b className='font-bold text-sky-400'>tiempo real</b>.</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Control de Acceso - Soluciones IoT:</h4>
+            <p>
+              Desarrollo de <b>API REST</b> (Python/Flask) para el control de acceso vehicular, logrando la convergencia entre <b>software</b> y <b>hardware</b> en <b>tiempo real</b>.
+            </p>
+          </span>
       },
       {
-        text: <span><b className='font-bold text-sky-400'>Gestión de Transacciones Críticas:</b> Implementé el módulo de verificación de pagos y recarga de tarjetas, asegurando la consistencia de los saldos y la integridad de los datos transaccionales.</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Gestión de Transacciones Financieras:</h4>
+            <p>
+              Implementación de módulos críticos para verificación de pagos y recarga de tarjetas, garantizando la consistencia de saldos y auditoría de datos en <b>DBs SQL</b>.
+            </p>
+          </span>
       },
       {
-        text: <span><b className='font-bold text-sky-400'>Resiliencia Operativa:</b> Optimicé el backend para garantizar un funcionamiento autónomo y de baja latencia, permitiendo el procesamiento de pagos sin dependencia crítica de conectividad constante.</span>
-      },
-      {
-        text: <span><b className='font-bold text-sky-400'>Estandarización:</b> Dockericé el entorno de ejecución para asegurar <b className='font-bold text-sky-400'>despliegues rápidos y uniformes</b> en los servidores locales de cada sede a nivel nacional.</span>
+        text:
+          <span className='flex flex-col'>
+            <h4 className='font-bold text-sky-400'>• Infraestructura y Estándarización:</h4>
+            <p>
+              Despliegue de <b>contenedores (Docker)</b> en servidores locales a nivel nacional, asegurando uniformidad operativa independiente de entorno.
+            </p>
+          </span>
       },
     ]
   }

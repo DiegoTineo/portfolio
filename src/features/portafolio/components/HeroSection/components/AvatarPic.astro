@@ -4,7 +4,7 @@ import avatar from "@/assets/photos/avatar.png";
 import { cn } from "@/shared/lib/utils";
 ---
 
-<div class="relative flex rounded-full shadow-2xl shadow-indigo-500/25 ">
+<div class="relative flex rounded-full shadow-2xl shadow-indigo-500/15 ">
   <Image
     src={avatar}
     alt="Avatar"
@@ -16,10 +16,10 @@ import { cn } from "@/shared/lib/utils";
         md:bg-deep-background
         bg-linear-to-b 
         from-blue-500 
-        to-black/20
+        to-black/80
         backdrop-blur-lg
       `
     )}
   />
-  <div class="absolute top-0 left-0 right-0 w-full h-full rounded-full bg-linear-to-b from-transparent to-indigo-950/25" />
+  <div class="absolute top-0 left-0 right-0 w-full h-full rounded-full bg-linear-to-b from-transparent to-indigo-950/20" />
 </div>

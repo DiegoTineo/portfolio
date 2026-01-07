@@ -1,16 +1,16 @@
 ---
 import { Image } from "astro:assets";
-import bg from "@/assets/backgrounds/randombg.gif";
+import bg from "@/assets/backgrounds/hero.gif";
 ---
 
 <div class="w-full h-full overflow-hidden">
-  <!-- <Image
+  <Image
     src={bg}
     alt="Hero Background"
-    class="w-full h-full xl:scale-220 object-cover md:scale-100 invert dark:invert-0 dark:hue-rotate-260"
+    class="w-full h-full xl:scale-220 object-cover md:scale-100 invert dark:invert-0 hue-rotate-50 dark:hue-rotate-250 contrast-200"
     loading="eager"
     fetchpriority="high"
-  /> -->
+  />
   <div
     class="absolute top-0 w-full h-full bg-linear-to-b from-transparent to-white dark:to-black backdrop-blur-md"
   >
