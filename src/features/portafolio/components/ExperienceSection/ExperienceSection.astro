@@ -1,6 +1,7 @@
 ---
 import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
 import { Timeline } from "./components/Timeline/Timeline";
+import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
 ---
 
 <section
@@ -10,11 +11,14 @@ import { Timeline } from "./components/Timeline/Timeline";
     <SectionTitle title="Experiencia:" client:load />
 
     <div class="flex flex-col mt-5 px-2 lg:px-7 gap-2 lg:text-lg ">
+      <AnimatedContainer client:load moveFrom="up">
       <p>
         <b class="text-sky-400 font-bold text-lg">4 años </b> transformando arquitecturas
         obsoletas y construyendo sistemas donde la resiliencia es el estándar.
       </p>
+    </AnimatedContainer>
     </div>
+    
   </div>
   <div class="container mx-auto mt-4">
     <Timeline client:load />

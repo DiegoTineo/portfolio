@@ -43,7 +43,7 @@ const highlights = [
       >
         {
           highlights.map((highlight) => (
-            <AnimatedContainer client:load>
+            <AnimatedContainer client:load once={false}>
               <div class="lg:w-md flex flex-col gap-1">
                 <h3
                   class={cn(

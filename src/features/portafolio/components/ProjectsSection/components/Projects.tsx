@@ -9,6 +9,7 @@ import { DiMsqlServer } from "react-icons/di";
 import { FcGoogle } from "react-icons/fc";
 import { SiTypescript } from "react-icons/si";
 import { ProjectCard, type ProjectCardProps } from "./ProjectCard";
+import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
 
 const TECH = {
   NEXT: { name: "Next.js", icon: <SiNextdotjs className='text-foreground' />, color: 'text-foreground' },
@@ -170,7 +171,9 @@ export function Projects() {
 
     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl mx-auto px-4 justify-items-center'>
       {PROJECTS.map((project, index) => (
-        <ProjectCard key={index} {...project} />
+        <AnimatedContainer key={index} once={false} transitionDuration={.5}>
+          <ProjectCard {...project} />
+        </AnimatedContainer>
       ))}
     </div>
   )

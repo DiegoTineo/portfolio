@@ -3,6 +3,7 @@ import HeroBackground from "./components/HeroBackgroundv2.astro";
 import HeroContactLinks from "./components/HeroContactLinks.astro";
 import AvatarPic from "./components/AvatarPic.astro";
 import { cn } from "@/shared/lib/utils";
+import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
 ---
 
 <section class="relative w-full min-h-svh">
@@ -28,8 +29,16 @@ import { cn } from "@/shared/lib/utils";
     )}
   >
     <!-- avatar -->
+
     <div class="w-45 lg:w-96 xl:w-120 max-w-md rounded-full aspect-square">
-      <AvatarPic />
+      <AnimatedContainer
+        once={false}
+        client:load
+        moveFrom="down"
+        transitionDuration={.5}
+      >
+        <AvatarPic />
+      </AnimatedContainer>
     </div>
 
     <!-- main content -->
@@ -55,8 +64,7 @@ import { cn } from "@/shared/lib/utils";
       >
         <!-- Construyo sistemas donde la precisión técnica se encuentra con la eficiencia y la experiencia del usuario -->
         Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial.
-        construyo infraestructuras escalables donde
-        la fiabilidad no es negociable.
+        construyo infraestructuras escalables donde la fiabilidad no es negociable.
         <!-- Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial.
         Modernizo arquitecturas legacy y construyo infraestructuras escalables donde
         la fiabilidad no es negociable. -->

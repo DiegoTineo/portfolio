@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 
 interface AnimatedContainerProps {
   children: ReactNode;
@@ -12,18 +12,22 @@ interface AnimatedContainerProps {
   className?: string;
   distance?: number;
   once?: boolean;
+  trigger?: "always" | "scrolldown";
 }
 
 export const AnimatedContainer = ({
   children,
-  transitionDuration = 0.5,
+  transitionDuration = 0.6,
   moveFrom,
   fade = true,
   delay = 0,
   className = "",
   distance = 30,
   once = true,
+  trigger = "always",
 }: AnimatedContainerProps) => {
+  const [isInView, setIsInView] = useState(false);
+  const [shouldAnimate, setShouldAnimate] = useState(true);
   // Configuración inicial (donde empieza el elemento)
   const initial: any = {};
   
@@ -68,14 +72,33 @@ export const AnimatedContainer = ({
     return <div className={className}>{children}</div>;
   }
 
+  const handleViewportEnter = (entry: IntersectionObserverEntry | null) => {
+    if (trigger === "scrolldown" && entry) {
+      // Si el top es negativo al entrar, es que el elemento ya pasó (el usuario está subiendo)
+      const isComingFromTop = entry.boundingClientRect.top < 0;
+      setShouldAnimate(!isComingFromTop);
+    } else {
+      setShouldAnimate(true);
+    }
+    setIsInView(true);
+  };
+
+  const handleViewportLeave = () => {
+    if (!once) {
+      setIsInView(false);
+    }
+  };
+
   return (
     <motion.div
       initial={initial}
-      whileInView={animate}
+      animate={isInView ? animate : initial}
+      onViewportEnter={handleViewportEnter}
+      onViewportLeave={handleViewportLeave}
       viewport={{ once }}
       transition={{
-        duration: transitionDuration,
-        delay: delay,
+        duration: shouldAnimate ? transitionDuration : 0,
+        delay: shouldAnimate ? delay : 0,
         ease: "easeOut",
       }}
       className={className}
