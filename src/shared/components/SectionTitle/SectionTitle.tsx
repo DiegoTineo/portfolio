@@ -11,13 +11,12 @@ export const SectionTitle = ({title}: SectionTitleProps) => {
       <span className='text-2xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-400 to-blue-400 dark:via-blue-500 dark:to-indigo-500'>♦ </span>
       <DecryptedText 
         encryptedClassName='text-2xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-blue-400 via-blue-400 to-blue-400 dark:via-blue-500 dark:to-indigo-500' 
-        className='text-5xl font-extrabold' 
+        className='text-shadow-sm dark:text-shadow-blue-50/5 text-5xl font-extrabold' 
         text={title} 
         animateOn="view"
         sequential 
         characters={CHARACTERS} 
         speed={60} 
-
       />
     </div>
   )

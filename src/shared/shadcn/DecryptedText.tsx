@@ -108,6 +108,7 @@ export default function DecryptedText({
 
     if (isHovering) {
       setIsScrambling(true);
+      setDisplayText(shuffleText(text, new Set()));
       interval = setInterval(() => {
         setRevealedIndices(prevRevealed => {
           if (sequential) {

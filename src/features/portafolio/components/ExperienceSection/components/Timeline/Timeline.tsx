@@ -54,7 +54,7 @@ const EXPERIENCE_ITEMS = [
           <span className='flex flex-col'>
             <h4 className='font-bold text-sky-400'>• Infraestructura y DevOps:</h4>
             <p>
-              Orquestación de contenedores con <b>Docker</b> y automatización de pipelines (CI/CD) mediante <b>GitHub Actions</b>, garantizando despliegues resilientes y alta disponibilidad.
+              Orquestación de contenedores con <b>Docker compose</b> y automatización de pipelines (CI/CD) mediante <b>GitHub Actions</b>, garantizando despliegues resilientes y alta disponibilidad.
             </p>
           </span>
       },

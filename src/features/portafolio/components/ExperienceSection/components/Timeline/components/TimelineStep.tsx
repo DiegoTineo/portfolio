@@ -23,8 +23,8 @@ export const TimelineStep: React.FC<TimelineStepProps> = ({
         {/* <div className="z-10 flex items-center gap-4 px-2 sticky top-15"> */}
         <div className="z-10 flex items-center gap-4 mx-1 p-1 rounded-2xl">
 
-          <div>
-            <img src={logo} alt={company} height={80} width={80} className="w-12 h-12 rounded-full border-white border-2 bg-white overflow-hidden flex items-center justify-center shadow-md object-contain" />
+          <div className="animate-bounce repeat-1">
+            <img src={logo} alt={company} height={80} width={80} className="w-12 h-12 rounded-full border-muted dark:border-white border-2 bg-white overflow-hidden flex items-center justify-center shadow-md object-contain" />
           </div>
 
           <div className=''>

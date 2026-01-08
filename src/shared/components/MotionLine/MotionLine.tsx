@@ -18,7 +18,7 @@ export const MotionLine = () => {
 
 
   return (
-    <div ref={containerRef} className="flex flex-col w-1 justify-start bg-muted/30 rounded-full">
+    <div ref={containerRef} className="flex flex-col w-1 justify-start bg-foreground/5 dark:bg-muted/30 rounded-full">
       <motion.div
         className={cn("rounded-b-full bg-linear-to-b from-purple-500/20 via-blue-950 to-purple-500 shadow-2xl shadow-purple-500")}
         style={{

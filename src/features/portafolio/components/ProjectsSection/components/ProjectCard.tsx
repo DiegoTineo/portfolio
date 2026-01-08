@@ -28,7 +28,7 @@ export const ProjectCard = ({
 
   return (
     <div
-      ref={containerRef} className='flex flex-col w-full max-w-xs rounded-md border-b-4 border-b-blue-500 border overflow-hidden shadow-2xl shadow-blue-500/15'
+      ref={containerRef} className='flex flex-col w-full max-w-sm min-w-xs rounded-md border-b-4 border-b-blue-500 border overflow-hidden shadow-2xl shadow-blue-500/15'
     >
 
       {/* CAROUSEL */}
@@ -37,13 +37,13 @@ export const ProjectCard = ({
       </div>
 
       {/* DESCRIPCION */}
-      <div className='justify-between flex flex-col h-full min-h-80'>
+      <div className='justify-between flex flex-col h-full min-h-70 lg:min-h-80'>
         {/* TITULO Y DESCRIPCION */}
-        <div className='mb-4 p-4 pb-0 '>
+        <div className='mb-4 p-4 pb-0'>
           <h3 className='text-xl font-bold mb-2'>
             {title}
           </h3>
-          <div className='text-xs text-foreground/75 gap-2 flex flex-col w-full'>
+          <div className='text-foreground/80 text-xs lg:text-sm gap-2 flex flex-col w-full'>
             {description}
           </div>
         </div>

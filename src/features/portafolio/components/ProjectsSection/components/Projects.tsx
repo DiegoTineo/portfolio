@@ -46,10 +46,11 @@ const PROJECTS: ProjectCardProps[] = [
     title: "WMS - Warehouse Management System",
     description: [
       <p key={0}>
-        <b className="font-bold text-sky-400">El Reto:</b> Garantizar la <b className="font-bold text-sky-400">trazabilidad total de activos</b> en almacenes de alta rotación, eliminando discrepancias entre el stock físico y el digital.
+        {/* <b className="font-bold text-sky-400">El Desafío:</b> Garantizar la <b className="font-bold text-sky-400">trazabilidad total de activos</b> en almacenes de alta rotación, eliminando discrepancias entre el stock físico y el digital. */}
+        <b className="font-bold text-sky-400">El Desafío: </b> Eliminar la divergencia de datos entre el stock físico y digital de almacenes en flujos de alta rotación.
       </p>,
       <p key={1}>
-        <b className="font-bold text-sky-400">La Solución:</b> Sistema integral para la gestión de transferencias, despachos y mermas con auditoría en tiempo real. Implementado bajo una arquitectura que prioriza la consistencia de datos en operaciones logísticas complejas.
+        <b className="font-bold text-sky-400">La Solución: </b> Sistema integral con auditoría transaccional en tiempo real que garantiza la trazabilidad total de activos en transferencias, despachos y mermas.
       </p>
     ],
     mainImage: "/images/projects/wms.png",
@@ -71,19 +72,18 @@ const PROJECTS: ProjectCardProps[] = [
     ],
     tech: [
       TECH.NEXT,
-      TECH.REACT,
       TECH.TAILWIND,
-      TECH.DOCKER,
       TECH.GRAPHQL,
       TECH.APOLLO,
+      TECH.DOCKER,
       TECH.TYPESCRIPT,
     ]
   },
   {
     title: "Modern POS & Facturación Offline-First",
     description: [
-      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> Garantizar la continuidad operativa de sistemas de ventas en entornos con conectividad inestable, donde una caída de internet significa pérdida de ventas.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Desarrollo de una <b className="font-bold text-sky-400">PWA asíncrona</b> con gestión de base de datos local y sincronización diferida para permitir facturar sin conexión y garantizar la integridad de los datos, priorizando la consistencia de datos.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Desafío: </b>Evitar la pérdida de ventas y la interrupción operativa en entornos con conectividad inestable.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> PWA con persistencia local y sincronización diferida, diseñada para facturar sin conexión garantizando la integridad de los datos al restaurarse la red.</p>
     ],
     mainImage: "/images/projects/posreact.png",
     carousel: [
@@ -105,7 +105,7 @@ const PROJECTS: ProjectCardProps[] = [
     tech: [
       TECH.REACT,
       TECH.MUI,
-      TECH.REACT_HOOK_FORM,
+      // TECH.REACT_HOOK_FORM,
       TECH.ZOD,
       TECH.GRAPHQL,
       TECH.APOLLO,
@@ -115,8 +115,8 @@ const PROJECTS: ProjectCardProps[] = [
   {
     title: "Conciliación de Pagos & Auditoría Bancaria",
     description: [
-      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> Permitir la verificación de transacciones financieras (Pago Móvil) a personal operativo sin comprometer la seguridad de las credenciales bancarias de la empresa.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias. Diseñada con validaciones estrictas para prevenir errores de registro y duplicidad de pagos.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Desafío:</b> Permitir la verificación de transacciones financieras a personal operativo sin exponer credenciales bancarias sensibles.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias de manera segura, capaz de prevenir errores de registro y duplicidad de pagos.</p>
     ],
     mainImage: "/images/projects/pmvalidator.png",
     carousel: [
@@ -135,7 +135,7 @@ const PROJECTS: ProjectCardProps[] = [
       TECH.REACT,
       TECH.TAILWIND,
       TECH.ZOD,
-      TECH.REACT_HOOK_FORM,
+      // TECH.REACT_HOOK_FORM,
       TECH.NEST,
       // TECH.POSTGRESQL,
       // TECH.MYSQL,
@@ -143,10 +143,10 @@ const PROJECTS: ProjectCardProps[] = [
     ]
   },
   {
-    title: "Estandarización de Impresoras Fiscales (Python API)",
+    title: "Middleware de Estandarización Fiscal",
     description: [
-      <p key={0}><b className="font-bold text-sky-400">El Reto:</b> La fragmentación de protocolos en hardware fiscal legacy que dificulta la integración con sistemas modernos.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Capa de abstracción (Middleware) que unifica la comunicación con diversos modelos de impresoras fiscales mediante una API REST. Resuelve la complejidad de protocolos seriales y garantiza la emisión de documentos legales de forma estandarizada y segura.</p>
+      <p key={0}><b className="font-bold text-sky-400">El Desafío:</b> Superar la fragmentación de protocolos complejos en hardware fiscal legacy e integrarlos con sistemas modernos.</p>,
+      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Capa de abstracción (API REST) y panel de configuración que unifica la comunicación con diversos modelos de impresoras, simplificando la emisión segura de documentos legales.</p>
     ],
     mainImage: "/images/projects/pyapi.png",
 
@@ -181,11 +181,9 @@ const PROJECTS: ProjectCardProps[] = [
 export function Projects() {
   return (
 
-    <div className='flex flex-wrap justify-center gap-10 w-full'>
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-full max-w-7xl mx-auto px-4 justify-items-center'>
       {PROJECTS.map((project, index) => (
-        <div key={index}>
-          <ProjectCard {...project} />
-        </div>
+        <ProjectCard key={index} {...project} />
       ))}
     </div>
   )
