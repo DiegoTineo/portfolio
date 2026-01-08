@@ -4,6 +4,7 @@ import { themeStore, toggleTheme } from '../stores/themeStore';
 import { Button } from '../shadcn/ui/button';
 import { RiMoonClearFill } from "react-icons/ri";
 import { LuSun } from "react-icons/lu";
+import { CgSpinner } from "react-icons/cg";
 
 export const ThemeToggleButton = () => {
   const theme = useStore(themeStore);
@@ -79,6 +80,7 @@ export const ThemeToggleButton = () => {
           <RiMoonClearFill key="moon" className="text-xl animate-[spin_0.6s_ease-in-out] text-blue-500 scale-110" />
         )
       )}
+      {!mounted && <CgSpinner key="spinner" className="text-xl animate-spin" />}
     </Button>
   );
 };
