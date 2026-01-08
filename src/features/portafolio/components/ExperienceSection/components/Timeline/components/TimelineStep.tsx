@@ -1,4 +1,11 @@
 import { FiExternalLink } from "react-icons/fi";
+import { cn } from "@/shared/lib/utils";
+
+
+interface TimelineItem {
+  title: string;
+  description: string;
+}
 
 interface TimelineStepProps {
   logo: string;
@@ -6,8 +13,11 @@ interface TimelineStepProps {
   company: string;
   duration: string;
   link: string;
-  items: Array<{ text: React.ReactNode }>;
+  items: TimelineItem[];
+  itemTitleClassName?: string;
+  itemDescriptionClassName?: string;
 }
+
 
 export const TimelineStep: React.FC<TimelineStepProps> = ({
   logo,
@@ -15,7 +25,9 @@ export const TimelineStep: React.FC<TimelineStepProps> = ({
   company,
   duration,
   link,
-  items
+  items,
+  itemTitleClassName,
+  itemDescriptionClassName
 }) => {
   return (
     <>
@@ -38,17 +50,23 @@ export const TimelineStep: React.FC<TimelineStepProps> = ({
               <FiExternalLink className="inline " />
               <span>{company}</span>
             </a>
-            <p className="text-base text-green-300/80">{duration}</p>
+            <p className="text-base text-green-600/80 dark:text-green-300/80">{duration}</p>
           </div>
 
         </div>
 
-        <div className="flex px-7 ml-4">
+        <div className="flex px-7 pr-4 ml-4">
           <div className="w-full md:w-1/2 px-1 my-5">
             <ul className="space-y-3 text-sm leading-relaxed flex flex-col gap-2">
               {(items ? items : []).map((item, index) => (
-                <li key={index} className="">
-                  {item.text}
+                <li key={index} className="flex flex-col">
+                  <h4 className={cn("font-bold text-sky-400 text-xs", itemTitleClassName)}>
+                    • {item.title}
+                  </h4>
+                  <p 
+                    className={cn("text-foreground/80", itemDescriptionClassName)}
+                    dangerouslySetInnerHTML={{ __html: item.description }}
+                  />
                 </li>
               ))}
             </ul>

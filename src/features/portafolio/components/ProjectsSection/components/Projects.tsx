@@ -44,15 +44,8 @@ const TECH = {
 const PROJECTS: ProjectCardProps[] = [
   {
     title: "WMS - Warehouse Management System",
-    description: [
-      <p key={0}>
-        {/* <b className="font-bold text-sky-400">El Desafío:</b> Garantizar la <b className="font-bold text-sky-400">trazabilidad total de activos</b> en almacenes de alta rotación, eliminando discrepancias entre el stock físico y el digital. */}
-        <b className="font-bold text-sky-400">El Desafío: </b> Eliminar la divergencia de datos entre el stock físico y digital de almacenes en flujos de alta rotación.
-      </p>,
-      <p key={1}>
-        <b className="font-bold text-sky-400">La Solución: </b> Sistema integral con auditoría transaccional en tiempo real que garantiza la trazabilidad total de activos en transferencias, despachos y mermas.
-      </p>
-    ],
+    challenge: "Eliminar la divergencia de datos entre el stock físico y digital de almacenes en flujos de alta rotación.",
+    solution: "Sistema integral con auditoría transaccional en tiempo real que garantiza la trazabilidad total de activos en transferencias, despachos y mermas.",
     mainImage: "/images/projects/wms.png",
     carousel: [
       <div className='relative h-full' key={0}>
@@ -81,10 +74,8 @@ const PROJECTS: ProjectCardProps[] = [
   },
   {
     title: "Modern POS & Facturación Offline-First",
-    description: [
-      <p key={0}><b className="font-bold text-sky-400">El Desafío: </b>Evitar la pérdida de ventas y la interrupción operativa en entornos con conectividad inestable.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> PWA con persistencia local y sincronización diferida, diseñada para facturar sin conexión garantizando la integridad de los datos al restaurarse la red.</p>
-    ],
+    challenge: "Evitar la pérdida de ventas y la interrupción operativa en entornos con conectividad inestable.",
+    solution: "PWA con persistencia local y sincronización diferida, diseñada para facturar sin conexión garantizando la integridad de los datos al restaurarse la red.",
     mainImage: "/images/projects/posreact.png",
     carousel: [
       <div className='relative h-full' key={0}>
@@ -114,10 +105,8 @@ const PROJECTS: ProjectCardProps[] = [
   },
   {
     title: "Conciliación de Pagos & Auditoría Bancaria",
-    description: [
-      <p key={0}><b className="font-bold text-sky-400">El Desafío:</b> Permitir la verificación de transacciones financieras a personal operativo sin exponer credenciales bancarias sensibles.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias de manera segura, capaz de prevenir errores de registro y duplicidad de pagos.</p>
-    ],
+    challenge: "Permitir la verificación de transacciones financieras a personal operativo sin exponer credenciales bancarias sensibles.",
+    solution: "Plataforma de abstracción financiera que centraliza reportes y agiliza la conciliación mediante APIs bancarias de manera segura, capaz de prevenir errores de registro y duplicidad de pagos.",
     mainImage: "/images/projects/pmvalidator.png",
     carousel: [
       <div className='relative h-full' key={0}>
@@ -144,10 +133,8 @@ const PROJECTS: ProjectCardProps[] = [
   },
   {
     title: "Middleware de Estandarización Fiscal",
-    description: [
-      <p key={0}><b className="font-bold text-sky-400">El Desafío:</b> Superar la fragmentación de protocolos complejos en hardware fiscal legacy e integrarlos con sistemas modernos.</p>,
-      <p key={1}><b className="font-bold text-sky-400">La Solución:</b> Capa de abstracción (API REST) y panel de configuración que unifica la comunicación con diversos modelos de impresoras, simplificando la emisión segura de documentos legales.</p>
-    ],
+    challenge: "Superar la fragmentación de protocolos complejos en hardware fiscal legacy e integrarlos con sistemas modernos.",
+    solution: "Capa de abstracción (API REST) y panel de configuración que unifica la comunicación con diversos modelos de impresoras, simplificando la emisión segura de documentos legales.",
     mainImage: "/images/projects/pyapi.png",
 
     tech: [

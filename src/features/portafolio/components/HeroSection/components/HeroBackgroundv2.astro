@@ -1,17 +1,29 @@
 ---
 import { Image } from "astro:assets";
 import bg from "@/assets/backgrounds/hero.gif";
+import { cn } from "@/shared/lib/utils";
 ---
 
 <div class="w-full h-full overflow-hidden">
   <Image
     src={bg}
     alt="Hero Background"
-    class="w-full h-full xl:scale-220 object-cover md:scale-100 invert dark:invert-0 hue-rotate-50 dark:hue-rotate-250 contrast-200"
+    class={cn(
+      `
+        w-full h-full 
+        md:scale-100 xl:scale-220 
+        object-cover 
+        invert 
+        dark:invert-0 
+        hue-rotate-20 dark:hue-rotate-250
+        contrast-200
+      `,
+    )}
     loading="eager"
     fetchpriority="high"
   />
-  <div
+
+<div
     class="absolute top-0 w-full h-full bg-linear-to-b from-transparent to-white dark:to-black backdrop-blur-md"
   >
   </div>

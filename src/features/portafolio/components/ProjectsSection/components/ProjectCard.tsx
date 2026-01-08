@@ -6,7 +6,8 @@ import { useRef } from 'react';
 
 export interface ProjectCardProps {
   title: string;
-  description: React.ReactNode[];
+  challenge: string | React.ReactNode;
+  solution: string | React.ReactNode;
   mainImage: string;
   carousel?: React.ReactNode[];
   tech: Array<{
@@ -18,7 +19,8 @@ export interface ProjectCardProps {
 
 export const ProjectCard = ({
   title,
-  description,
+  challenge,
+  solution,
   mainImage,
   carousel,
   tech
@@ -44,7 +46,14 @@ export const ProjectCard = ({
             {title}
           </h3>
           <div className='text-foreground/80 text-xs lg:text-sm gap-2 flex flex-col w-full'>
-            {description}
+            <p>
+              <b className="font-bold text-sky-400 dark:text-sky-300">El Desafío: </b>
+              {challenge}
+            </p>
+            <p>
+              <b className="font-bold text-sky-400 dark:text-sky-300">La Solución: </b>
+              {solution}
+            </p>
           </div>
         </div>
 
