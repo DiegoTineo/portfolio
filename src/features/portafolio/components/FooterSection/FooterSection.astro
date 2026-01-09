@@ -1,0 +1,91 @@
+---
+import DecryptedText from "@/shared/shadcn/DecryptedText";
+import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
+
+const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
+---
+
+<footer class="w-full mt-20 pb-10">
+  <div class="container mx-auto px-4 lg:px-8">
+    <div
+      class="relative overflow-hidden rounded-3xl bg-withe dark:bg-slate-950/40 border dark:border-slate-800/50 backdrop-blur-xl p-4 border-b border-indigo-500/20 md:p-12 lg:p-16 group"
+    >
+      <!-- Background Decorative Elements -->
+      <div
+        class="absolute -top-24 -right-24 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition-colors duration-700"
+      >
+      </div>
+      <div
+        class="absolute -bottom-24 -left-24 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl group-hover:bg-indigo-500/20 transition-colors duration-700"
+      >
+      </div>
+
+      <div
+        class="relative z-10 flex flex-col items-center text-center max-w-4xl mx-auto gap-8"
+      >
+        <div class="flex flex-col gap-4 w-full">
+          <h2
+            class="text-lg md:text-4xl lg:text-5xl font-black tracking-tight text-white leading-tight"
+          >
+            <DecryptedText
+              client:load
+              text="¿Listo para construir o modernizar tu"
+              animateOn="view"
+              revealDirection="start"
+              speed={20}
+              className="text-sky-950 dark:text-foreground"
+              encryptedClassName="text-sky-950 dark:text-foreground text-xs"
+              characters={CHARACTERS}
+              sequential
+            />
+            <br />
+            <span
+              class="text-sky-400"
+            >
+              <DecryptedText
+                client:load
+                text="próximo sistema crítico?"
+                animateOn="view"
+                revealDirection="start"
+                speed={30}
+                className="text-sky-400"
+                encryptedClassName="text-sky-400 text-xs"
+                characters={CHARACTERS}
+                sequential
+              />
+            </span>
+          </h2>
+        </div>
+
+        <AnimatedContainer client:load>
+          <p
+            class="text-xs md:text-xl text-slate-900/90 dark:text-slate-400 leading-relaxed font-medium"
+          >
+            Ya sea diseñando una infraestructura desde cero con bases sólidas o
+            transformando sistemas legacy para garantizar la continuidad
+            operativa, aporto la ingeniería necesaria para que tu tecnología
+            nunca sea un obstáculo.
+          </p>
+        </AnimatedContainer>
+
+        <div class="flex flex-wrap justify-center gap-4 mt-4 min-h-12.5">
+          <slot name="contact-buttons" />
+          <!-- 
+            Yo agregare los botones de contacto luego de eso 
+            (Botones que el usuario agregará manualmente)
+          -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Footer Line -->
+    <div
+      class="mt-12 flex flex-col md:flex-row justify-between items-center gap-4 border-t border-indigo-500/20 dark:border-slate-800/30 pt-8 text-slate-500 text-sm"
+    >
+      <p class="text-xs lg:text-base text-slate-200/30">
+       🔹 Developed by Diego Tineo 🔹
+      </p>
+      
+    </div>
+  </div>
+</footer>
