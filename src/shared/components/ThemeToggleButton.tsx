@@ -75,12 +75,12 @@ export const ThemeToggleButton = () => {
       {/* Solo se muestra el icono cuando el componente se ha montado en el cliente */}
       {mounted && (
         theme === 'dark' ? (
-          <LuSun key="sun" className="text-xl animate-[spin_0.6s_ease-in-out] scale-110" />
+          <LuSun key="sun" className="text-xl animate-[spin_0.6s_ease-in-out] scale-110 rounded-full" />
         ) : (
-          <RiMoonClearFill key="moon" className="text-xl animate-[spin_0.6s_ease-in-out] text-blue-500 scale-110" />
+          <RiMoonClearFill key="moon" className="text-xl animate-[spin_0.6s_ease-in-out] text-blue-500 scale-110 rounded-full" />
         )
       )}
-      {!mounted && <CgSpinner key="spinner" className="text-xl animate-spin" />}
+      {!mounted && <CgSpinner key="spinner" className="text-xl animate-spin rounded-full" />}
     </Button>
   );
 };
