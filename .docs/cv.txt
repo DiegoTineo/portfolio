@@ -1,0 +1,60 @@
+DIEGO TINEO
+Full Stack Engineer | Sistemas de Alta Disponibilidad, Arquitecturas Escalables e IA Aplicada [LinkedIn] | [GitHub] | [Portafolio] | [Diegoatineoz@gmail.com] | [+584121849988]
+
+PERFIL PROFESIONAL
+
+Ingeniero de Software con más de 4 años de experiencia transformando infraestructuras críticas y construyendo sistemas donde la resiliencia y la continuidad operativa son la prioridad.
+
+Especialista en la transición de arquitecturas legacy hacia microservicios mediante el patrón Strangler Fig. Experto en el diseño de soluciones auditables que garantizan la integridad transaccional y la alta disponibilidad de los datos.
+
+Combino el desarrollo de sistemas de tiempo real y sincronización diferida con la integración estratégica de IA Generativa y NLP (Function Calling) para automatizar procesos de negocio complejos.
+
+
+EXPERIENCIA PROFESIONAL
+Somos Sistemas (AFTIM) | Full Stack Developer
+Enero 2022 – Actualidad
+
+Integración de IA Generativa: Implementé soluciones basadas en LLMs (Gemini API) utilizando Function Calling para transformar lenguaje natural en llamadas a funciones del sistema, permitiendo la consulta dinámica de KPIs e indicadores clave mediante asistentes inteligentes.
+
+Modernización y Microservicios: Lideré la transición de un ERP legacy (PHP 5.6) hacia una arquitectura moderna con Node.js (NestJS) y JWT, aplicando el patrón Strangler Fig para evolucionar el sistema sin interrupciones.
+
+Sistemas en Tiempo Real: Diseñé e implementé módulos críticos de POS y gestión de pedidos utilizando WebSockets y GraphQL, garantizando la sincronización instantánea de datos entre múltiples clientes y servidores.
+
+Resiliencia y Disponibilidad: Desarrollé capacidades Offline-First en aplicaciones críticas para asegurar la operación ininterrumpida en entornos de baja conectividad, manteniendo la integridad transaccional una vez restaurada la red.
+
+Infraestructura y DevOps: Automaticé el ciclo de vida del software mediante Docker y GitHub Actions, gestionando el despliegue y monitoreo de aplicaciones en entornos Linux (VPS) con alta seguridad.
+
+SCAV Parking (Alianza AFTIM) | Backend Developer
+Enero 2022 – Marzo 2024
+SCAV Parking (Alianza AFTIM) | Backend Developer
+Enero 2022 – Marzo 2024
+
+Estandarización e IoT: Desarrollé APIs robustas en Python (Flask) para la integración de hardware fiscal y sistemas de control de acceso vehicular, logrando la sincronización en tiempo real entre el hardware físico y el software de gestión.
+
+Sistemas de Pago y Recarga: Diseñé e implementé el flujo de pagos de tarifas y un sistema de auto-pago y recarga de tarjetas, garantizando la integridad de las transacciones financieras y la consistencia de saldos.
+
+Auditoría y Conciliación: Desarrollé los módulos de auditoría administrativa, asegurando que cada transacción (pago/recarga) fuera trazable y conciliada en los reportes financieros del sistema.
+
+
+PROYECTOS DESTACADOS
+Smart Business Analytics (AI Agent): Middleware basado en Google Gemini API que utiliza Function Calling para interpretar lenguaje natural y ejecutar funciones de sistema en tiempo real. Permite a los gerentes consultar KPIs y resúmenes analíticos complejos mediante una interfaz de chat inteligente conectada a datos operativos.
+
+WMS (Warehouse Management System): Arquitectura transaccional diseñada para la trazabilidad total de activos en flujos de alta rotación. Implementa lógica de auditoría en tiempo real que elimina la divergencia entre el stock físico y digital, reduciendo drásticamente las mermas operativas.
+
+Modern POS (Offline-First PWA): Sistema de punto de venta diseñado para garantizar la continuidad operativa en entornos de conectividad inestable. Implementa sincronización diferida e integridad de datos local, permitiendo facturar sin conexión y sincronizar automáticamente al restaurarse la red.
+
+
+HABILIDADES TÉCNICAS
+AI & Data: Gemini API (Function Calling), Prompt Engineering, SQL (PostgreSQL, MySQL), Redis.
+
+Backend: Node.js (NestJS), Python (FastAPI, Flask), Go.
+
+Frontend: React, Next.js, TypeScript, Tailwind CSS, PWA, Gestión de estado complejo.
+
+Infraestructura: Docker, GitHub Actions, Linux (Ubuntu), Nginx, Arquitecturas Real-time.
+
+Patrones: Microservicios, Strangler Fig, Clean Architecture, Screaming Architecture, hexagonal architecture, DDD.
+
+
+EDUCACIÓN
+Licenciatura en Informática | Universidad de Oriente (UDONE) Carga académica completada (100%). Fecha de grado: Julio 2025.

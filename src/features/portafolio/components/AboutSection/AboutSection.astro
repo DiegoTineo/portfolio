@@ -3,6 +3,7 @@ import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
 import { MotionLine } from "@/shared/components/MotionLine/MotionLine";
 import { SectionTitle } from "@/shared/components/SectionTitle/SectionTitle";
 import { cn } from "@/shared/lib/utils";
+import AboutAICard from "./components/AboutAICard.astro";
 
 // Ingeniería de Resiliencia: Diseño sistemas auditables y escalables, priorizando arquitecturas distribuidas que garantizan la consistencia de la información en entornos de alta transaccionalidad.
 
@@ -25,7 +26,7 @@ const highlights = [
     title: "Precisión Visual (UX/UI):",
     description:
       "Implementación técnica de interfaces donde la estética sirve a la función. Aseguro que la robustez del backend se traduzca en experiencias de usuario intuitivas, fluidas y libres de fricción operativa.",
-  },
+  }
 ];
 ---
 
@@ -38,73 +39,42 @@ const highlights = [
     <div class="flex my-6 gap-2">
       <MotionLine client:load />
 
-      <div
-        class="text-sm mx-auto flex flex-col lg:flex-row w-fit gap-5 lg:gap-10 p-4 lg:flex-wrap"
-      >
-        {
-          highlights.map((highlight) => (
-            <AnimatedContainer client:load once={false}>
-              <div class="lg:w-md flex flex-col gap-1">
-                <h3
-                  class={cn(
-                    "text-sky-400 font-bold",
-                    "text-xl",
-                    "lg:text-xl",
-                    "xl:text-2xl",
-                  )}
-                >
-                  {highlight.title}
-                </h3>
-                <p class={cn("text-sm", "lg:text-sm", "xl:text-base")}>
-                  {highlight.description}
-                </p>
-              </div>
-            </AnimatedContainer>
-          ))
-        }
+      <!-- XS/SM/MD: Single column, highlights stacked, then AboutAICard -->
+      <!-- LG: 2-column grid for highlights, then full-width AboutAICard -->
+      <!-- XL: 3-column grid, 2 cols for highlights, 1 col for AboutAICard -->
+      <div class="text-sm mx-auto w-full p-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
+          <!-- Highlights column(s) -->
+          <div class="lg:col-span-2 xl:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
+            {
+              highlights.map((highlight) => (
+                <AnimatedContainer client:load once={false}>
+                  <div class="flex flex-col gap-1">
+                    <h3
+                      class={cn(
+                        "text-sky-400 font-bold",
+                        "text-xl",
+                        "lg:text-xl",
+                        "xl:text-2xl",
+                      )}
+                    >
+                      {highlight.title}
+                    </h3>
+                    <p class={cn("text-sm", "lg:text-sm", "xl:text-base")}>
+                      {highlight.description}
+                    </p>
+                  </div>
+                </AnimatedContainer>
+              ))
+            }
+          </div>
 
-        <!-- 
-        <p>
-          Diseño <b class="text-sky-500">sistemas resilientes</b>, <b class="text-sky-500">auditables</b> y <b class="text-sky-500">escalables</b>, priorizando
-          arquitecturas que garantizan la consistencia de la información en
-          entornos transaccionales.
-        </p>
-        <p>
-          Me especializo en la <b class="text-sky-500">modernización estrategica de arquitecturas legacy</b> hacia
-          microservicios, optimizando el ciclo de vida del software (SDLC)
-          mediante CI/CD y containerización con Docker.
-        </p>
-        <p>
-          Construyo <b>interfaces de precisión</b> donde la estética sirve a la
-          función. Traduzco la robustez del backend en experiencias de usuario
-          fluidas, eliminando la complejidad operativa mediante un diseño
-          orientado a la eficiencia.
-        </p> -->
+          <!-- AboutAICard: Full width on XS/SM/MD/LG, side column on XL -->
+          <div class="lg:col-span-2 xl:col-span-1">
+            <AboutAICard />
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-<!-- 
-  <ul class="flex flex-col text-sm my-3 max-w-3xl px-4 md:px-0 gap-5">
-    <li class="flex items-center gap-2">
-      <div class="aspect-square w-5 rounded-sm bg-blue-500 flex items-center justify-center">4</div>
-      <b>4 años</b> de experiencia full stack
-    </li>
-
-    <li>
-      <b>2 años</b> de experiencia en UX/UI
-    </li>
-    <li>
-      UX/UI enfocado en experiencia del usuario y calidad de los sistemas, capaz de implementar fielmente diseños. 
-    </li>
-    <li>
-      Mi experiencia abarca la <b>planificación</b>, <b>diseño</b>, <b
-        >desarrollo</b
-      >, <b>desplieque</b> y <b>mantenimiento</b> de aplicaciones full-stack.
-    </li>
-
-    <li>Especialista en modernización de arquitecturas legacy</li>
-    <li>Implementación pipelines de github actions</li>
-    <li>Dockerización de aplicaciones (Ghcr, Dockerhub)</li>
-    <li>experiencia en desarrollo web</li>
-  </ul> -->

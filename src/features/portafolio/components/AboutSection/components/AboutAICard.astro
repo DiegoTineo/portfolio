@@ -1,0 +1,85 @@
+---
+import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
+import LofiCard from "../components/LofiCard.astro";
+import { RiGeminiFill } from "react-icons/ri";
+import { FaFire } from "react-icons/fa";
+---
+
+<AnimatedContainer client:load moveFrom="down">
+  <div class="relative">
+    <!-- Hot Demand Badge -->
+    <div class="absolute -top-2 -right-2 z-10 badge-container">
+      <div
+        class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-linear-to-r from-orange-500 via-red-500 to-orange-500 shadow-lg shadow-red-500/50 border border-orange-400/30"
+      >
+        <FaFire className="flame-icon text-yellow-200" size={14} />
+      </div>
+    </div>
+
+    <LofiCard>
+      <div class="flex flex-col gap-4 w-full text-center">
+        <div class="flex w-full justify-start items-end">
+          <RiGeminiFill size={12} className="animate-pulse" />
+          <RiGeminiFill size={24} className="animate-pulse" />
+        </div>
+
+        <h3 class="text-2xl font-bold">IA Generativa</h3>
+        <p class="text-sm md:text-lg">
+          Implementa soluciones con LLMs (Gemini API) mediante Function Calling
+          para automatizar consultas dinámicas de KPIs y métricas clave a través
+          de asistentes inteligentes.
+        </p>
+        <div class="flex w-full justify-end">
+          <RiGeminiFill size={24} className="animate-pulse" />
+          <RiGeminiFill size={12} className="animate-pulse" />
+        </div>
+      </div>
+    </LofiCard>
+  </div>
+</AnimatedContainer>
+
+<style>
+  @keyframes flicker {
+    0%,
+    100% {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    25% {
+      transform: scale(1.1) rotate(-5deg);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.15) rotate(5deg);
+      opacity: 1;
+    }
+    75% {
+      transform: scale(1.05) rotate(-3deg);
+      opacity: 0.95;
+    }
+  }
+
+  @keyframes pulse-glow {
+    0%,
+    100% {
+      box-shadow:
+        0 10px 15px -3px rgba(239, 68, 68, 0.5),
+        0 4px 6px -2px rgba(239, 68, 68, 0.3);
+    }
+    50% {
+      box-shadow:
+        0 10px 20px -3px rgba(239, 68, 68, 0.7),
+        0 4px 8px -2px rgba(239, 68, 68, 0.5),
+        0 0 20px rgba(251, 146, 60, 0.4);
+    }
+  }
+
+  .flame-icon {
+    animation: flicker 1.5s ease-in-out infinite;
+    filter: drop-shadow(0 0 3px rgba(254, 243, 199, 0.8));
+  }
+
+  .badge-container > div {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+</style>
