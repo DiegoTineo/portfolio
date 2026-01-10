@@ -45,7 +45,7 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
             <span class="text-sky-400">
               <DecryptedText
                 client:load
-                text="próximo sistema crítico?"
+                text="próximo sistema?"
                 animateOn="view"
                 revealDirection="start"
                 speed={30}
@@ -60,14 +60,20 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
 
         <AnimatedContainer client:load>
           <p
-            class="text-xs md:text-xl text-slate-900/90 dark:text-slate-400 leading-relaxed font-medium"
+            class="text-xs md:text-xl text-slate-900/90 dark:text-slate-400 leading-relaxed font-medium mb-5"
           >
             Ya sea diseñando una infraestructura desde cero con bases sólidas o
             transformando sistemas legacy para garantizar la continuidad
             operativa, aporto la ingeniería necesaria para que tu tecnología
             nunca sea un obstáculo.
           </p>
-        </AnimatedContainer>
+
+          <span class="text-sky-400  text-lg md:text-2xl font-bold">
+            Contactame para más información.
+          </span>
+        </AnimatedContainer>        
+
+        <AnimatedContainer client:load>
 
         <div class="flex flex-wrap justify-center gap-4">
           <ContactButton
@@ -81,7 +87,7 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
           <ContactButton
             label={"WhatsApp"}
             href={"https://wa.me/584121849988/?text=Hola, me gustaría contactarte."}
-            className={"bg-green-600 border-green-800 shadow-4xl hover:shadow-green-400/50"}
+            className={"text-white bg-green-600 border-green-800 shadow-4xl hover:shadow-green-400/50"}
           >
             <FaWhatsapp slot="icon" />
           </ContactButton>
@@ -94,6 +100,7 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
             <SiGmail slot="icon" />
           </ContactButton>
         </div>
+      </AnimatedContainer>
       </div>
     </div>
 

@@ -4,10 +4,15 @@ import avatar from "@/assets/photos/avatar.png";
 import { cn } from "@/shared/lib/utils";
 ---
 
-<div class="relative flex rounded-full shadow-2xl shadow-indigo-500/15 ">
+<div
+  id="avatar-pic-container"
+  class="relative flex rounded-full shadow-2xl shadow-indigo-500/15 opacity-0 transition-opacity duration-300"
+>
   <Image
     src={avatar}
     alt="Avatar"
+    loading="eager"
+    fetchpriority="high"
     class={cn(
       `
         w-56 lg:w-100 xl:w-120
@@ -21,5 +26,28 @@ import { cn } from "@/shared/lib/utils";
       `
     )}
   />
-  <div class="absolute top-0 left-0 right-0 w-full h-full rounded-full bg-linear-to-b from-transparent to-indigo-950/20" />
+  <div
+    class="absolute top-0 left-0 right-0 w-full h-full rounded-full bg-linear-to-b from-transparent to-indigo-950/20"
+  >
+  </div>
 </div>
+
+<script is:inline>
+  (function () {
+    const container = document.getElementById("avatar-pic-container");
+    const img = container?.querySelector("img");
+
+    if (!img || !container) return;
+
+    function showAvatar() {
+      container.classList.remove("opacity-0");
+      container.classList.add("animate-fade-in-up");
+    }
+
+    if (img.complete) {
+      showAvatar();
+    } else {
+      img.addEventListener("load", showAvatar);
+    }
+  })();
+</script>

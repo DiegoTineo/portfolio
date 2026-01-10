@@ -3,7 +3,6 @@ import HeroBackground from "./components/HeroBackgroundv2.astro";
 import HeroContactLinks from "./components/HeroContactLinks.astro";
 import AvatarPic from "./components/AvatarPic.astro";
 import { cn } from "@/shared/lib/utils";
-import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
 ---
 
 <section class="relative w-full min-h-svh">
@@ -31,18 +30,11 @@ import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
     <!-- avatar -->
 
     <div class="w-45 lg:w-96 xl:w-120 max-w-md rounded-full aspect-square">
-      <AnimatedContainer
-        once={false}
-        client:load
-        moveFrom="down"
-        transitionDuration={0.5}
-      >
-        <AvatarPic />
-      </AnimatedContainer>
+      <AvatarPic />
     </div>
 
     <!-- main content -->
-    <AnimatedContainer client:load moveFrom="up" transitionDuration={0.5}>
+    <div class="animate-fade-in-down">
       <div
         class="text-center mt-8 flex flex-col items-center lg:items-start lg:w-xl"
       >
@@ -66,23 +58,14 @@ import AnimatedContainer from "@/shared/components/animated/AnimatedContainer";
           `,
           )}
         >
-          <!-- Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial.
-        construyo infraestructuras escalables donde la fiabilidad no es negociable.
-         -->
-
           Especialista en sistemas web enfocado en la continuidad operativa y
           digitalización de procesos de negocio. Construyo soluciones escalables
           donde la fiabilidad de los datos no es negociable.
-
-          <!-- Construyo sistemas donde la precisión técnica se encuentra con la eficiencia y la experiencia del usuario -->
-          <!-- Especialista en Sistemas web de Misión Crítica y Trazabilidad Industrial.
-        Modernizo arquitecturas legacy y construyo infraestructuras escalables donde
-        la fiabilidad no es negociable. -->
         </p>
         <div class="flex justify-start w-xs lg:w-full mt-4 mx-auto h-20">
           <HeroContactLinks />
         </div>
       </div>
-    </AnimatedContainer>
+    </div>
   </div>
 </section>
