@@ -8,9 +8,15 @@ import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
+  server: {
+    host: true,
+  },
   vite: {
-      plugins: [tailwindcss()],
-	},
+    plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['.trycloudflare.com'],
+    },
+  },
 
   integrations: [
     react(),
