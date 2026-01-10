@@ -8,7 +8,9 @@ import { SiGmail } from "react-icons/si";
 const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
 ---
 
-<footer class="w-full mt-20 pb-10 bg-linear-to-b from-transparent to-indigo-500/8">
+<footer
+  class="w-full mt-20 pb-10 bg-linear-to-b from-transparent to-indigo-500/8"
+>
   <div class="container mx-auto px-4 lg:px-8">
     <div
       class="relative overflow-hidden rounded-3xl bg-withe dark:bg-slate-950/40 border dark:border-slate-800/50 backdrop-blur-xl p-4 border-b border-indigo-500/20 md:p-12 lg:p-16 group max-w-6xl mx-auto"
@@ -71,36 +73,35 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
           <span class="text-sky-400 md:text-2xl font-bold">
             Contactame para más información.
           </span>
-        </AnimatedContainer>        
+        </AnimatedContainer>
 
-        <AnimatedContainer client:load delay={.2}>
+        <AnimatedContainer client:load delay={0.2}>
+          <div class="flex flex-wrap justify-center gap-4">
+            <ContactButton
+              label={"Linkedin"}
+              href={"https://www.linkedin.com/in/diego-tineo-4a0526137/"}
+              className={"bg-blue-600 text-white border-blue-800 shadow-4xl hover:shadow-blue-400/50"}
+            >
+              <FaLinkedin slot="icon" />
+            </ContactButton>
 
-        <div class="flex flex-wrap justify-center gap-4">
-          <ContactButton
-            label={"Linkedin"}
-            href={"https://www.linkedin.com/in/diego-tineo-4a0526137/"}
-            className={"bg-blue-600 text-white border-blue-800 shadow-4xl hover:shadow-blue-400/50"}
-          >
-            <FaLinkedin slot="icon" />
-          </ContactButton>
+            <ContactButton
+              label={"WhatsApp"}
+              href={"https://wa.me/584121849988/?text=Hola, me gustaría contactarte."}
+              className={"text-white bg-green-600 border-green-800 shadow-4xl hover:shadow-green-400/50"}
+            >
+              <FaWhatsapp slot="icon" />
+            </ContactButton>
 
-          <ContactButton
-            label={"WhatsApp"}
-            href={"https://wa.me/584121849988/?text=Hola, me gustaría contactarte."}
-            className={"text-white bg-green-600 border-green-800 shadow-4xl hover:shadow-green-400/50"}
-          >
-            <FaWhatsapp slot="icon" />
-          </ContactButton>
-
-           <ContactButton
-            label={"Email"}
-            href={"mailto:diegoatineoz@gmail.com"}
-            className={"bg-orange-400 text-white border-orange-800 shadow-4xl hover:shadow-orange-400/50"}
-          >
-            <SiGmail slot="icon" />
-          </ContactButton>
-        </div>
-      </AnimatedContainer>
+            <ContactButton
+              label={"Email"}
+              href={"mailto:diegoatineoz@gmail.com"}
+              className={"bg-orange-400 text-white border-orange-800 shadow-4xl hover:shadow-orange-400/50"}
+            >
+              <SiGmail slot="icon" />
+            </ContactButton>
+          </div>
+        </AnimatedContainer>
       </div>
     </div>
 
@@ -108,15 +109,16 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
     <div
       class="mt-12 flex flex-col justify-center items-center gap-4 border-t border-indigo-500/20 dark:border-slate-800/30 pt-8 text-slate-500 text-sm"
     >
+      <div
+        class="flex items-center gap-3 text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-foreground/50 font-medium"
+      >
+        <p
+          class="flex items-center gap-3 text-xs lg:text-base text-foreground/50 uppercase tracking-[0.25em] border-r border-indigo-500/20 pr-2"
+        >
+          <span class="text-sky-500/50">♦ </span>
+          <span>Built with</span>
+        </p>
 
-      <p class="flex gap-3 text-xs lg:text-base text-foreground/50">
-        <span class="text-sky-500/50">♦ </span>
-        <span>Built by Diego Tineo using</span>
-        <span class="text-sky-500/50">♦ </span>
-      </p>
-
-      
-      <div class="flex items-center gap-3 text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-foreground/50 font-medium">
         <span>Astro</span>
         <span class="size-1 rounded-full bg-indigo-500/20"></span>
         <span>React</span>
