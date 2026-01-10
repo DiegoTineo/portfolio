@@ -8,10 +8,10 @@ import { SiGmail } from "react-icons/si";
 const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
 ---
 
-<footer class="w-full mt-20 pb-10">
+<footer class="w-full mt-20 pb-10 bg-linear-to-b from-transparent to-indigo-500/8">
   <div class="container mx-auto px-4 lg:px-8">
     <div
-      class="relative overflow-hidden rounded-3xl bg-withe dark:bg-slate-950/40 border dark:border-slate-800/50 backdrop-blur-xl p-4 border-b border-indigo-500/20 md:p-12 lg:p-16 group"
+      class="relative overflow-hidden rounded-3xl bg-withe dark:bg-slate-950/40 border dark:border-slate-800/50 backdrop-blur-xl p-4 border-b border-indigo-500/20 md:p-12 lg:p-16 group max-w-6xl mx-auto"
     >
       <!-- Background Decorative Elements -->
       <div
@@ -73,7 +73,7 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
           </span>
         </AnimatedContainer>        
 
-        <AnimatedContainer client:load>
+        <AnimatedContainer client:load delay={.2}>
 
         <div class="flex flex-wrap justify-center gap-4">
           <ContactButton
@@ -106,13 +106,23 @@ const CHARACTERS = "▖■▎▃▄▇█❚▀▙▚▛▜▟▞▂▬▔";
 
     <!-- Final Footer Line -->
     <div
-      class="mt-12 flex flex-col md:flex-row justify-center items-center gap-4 border-t border-indigo-500/20 dark:border-slate-800/30 pt-8 text-slate-500 text-sm"
+      class="mt-12 flex flex-col justify-center items-center gap-4 border-t border-indigo-500/20 dark:border-slate-800/30 pt-8 text-slate-500 text-sm"
     >
-      <p class="text-xs lg:text-base dark:text-slate-200/30">
+
+      <p class="flex gap-3 text-xs lg:text-base text-foreground/50">
         <span class="text-sky-500/50">♦ </span>
-        <span>Diego Tineo | Full Stack Engineer</span>
+        <span>Built by Diego Tineo using</span>
         <span class="text-sky-500/50">♦ </span>
       </p>
+
+      
+      <div class="flex items-center gap-3 text-[9px] md:text-[10px] uppercase tracking-[0.25em] text-foreground/50 font-medium">
+        <span>Astro</span>
+        <span class="size-1 rounded-full bg-indigo-500/20"></span>
+        <span>React</span>
+        <span class="size-1 rounded-full bg-indigo-500/20"></span>
+        <span>Google Analytics</span>
+      </div>
     </div>
   </div>
 </footer>
