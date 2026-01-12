@@ -5,7 +5,7 @@ import { cn } from "@/shared/lib/utils";
 ---
 
 <div class="w-full h-full overflow-hidden pointer-events-none">
-  <!-- IMAGE LAYER -->
+  {/* IMAGE LAYER */}
   <div class="absolute inset-0 overflow-hidden">
     <Image
       src={bg}
@@ -28,19 +28,19 @@ import { cn } from "@/shared/lib/utils";
     <div class="absolute inset-0 backdrop-blur-md md:backdrop-blur-xl"></div>
   </div>
 
-  <!-- FX LAYER -->
+  {/* FX LAYER */}
   <div
     class="absolute inset-0 overflow-hidden"
   >
-    <!-- Grid Layer -->
+    {/* Grid Layer */}
     <div 
       class="opacity-50 absolute inset-0 bg-[linear-gradient(to_right,rgba(128,128,128,0.2)_1px,transparent_1px),linear-gradient(to_bottom,rgba(128,128,128,0.2)_1px,transparent_1px)] bg-size-[40px_40px] mask-[radial-gradient(ellipse_80%_80%_at_50%_0%,#000_20%,transparent_100%)]"
     ></div>
 
-    <!-- Top shadow/fade to keep AppBar area neutral -->
+    {/* Top shadow/fade to keep AppBar area neutral */}
     <div class="absolute top-0 left-0 right-0 h-48 bg-linear-to-b from-white via-white/80 to-transparent dark:from-black dark:via-black/80 dark:to-transparent z-10"></div>
 
-    <!-- Animated Light Blobs -->
+    {/* Animated Light Blobs */}
     <div class="absolute inset-0 opacity-30 dark:opacity-10">
       <div 
         class="absolute top-[10%] left-[-5%] w-125 h-125 bg-indigo-500/30 rounded-full blur-[120px] animate-blob"
@@ -57,7 +57,7 @@ import { cn } from "@/shared/lib/utils";
     </div>
   </div>
 
-  <!-- TRANSITION LAYER -->
+  {/* TRANSITION LAYER */}
   <div
     class="absolute top-0 w-full h-full bg-linear-to-b from-transparent via-transparent to-white dark:to-black z-20"
   >

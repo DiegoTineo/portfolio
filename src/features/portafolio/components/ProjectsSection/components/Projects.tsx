@@ -52,17 +52,17 @@ const PROJECTS: ProjectCardProps[] = [
       <div className='relative h-full' key={0}>
         <img src={"/images/projects/wms.png"} alt={"WMS - Cover"} height={1200} width={1200} className="absolute inset-0 w-full h-full object-contain" />
       </div>,
-      <div className='relative h-full' key={1}>
-        {/* <Image src={"/images/projects/pmvalidator.png"} alt={"Conciliación de pagos - Dashboard"} height={1200} width={1200} className="absolute inset-0 w-full h-full object-contain" /> */}
-        {/* <video
-          src={'/videos/wms.mp4'}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className='-z-20 absolute inset-0 w-full h-full object-cover object-center brightness-80'
-        /> */}
-      </div>
+      // <div className='relative h-full' key={1}>
+      //   {/* <Image src={"/images/projects/pmvalidator.png"} alt={"Conciliación de pagos - Dashboard"} height={1200} width={1200} className="absolute inset-0 w-full h-full object-contain" /> */}
+      //   {/* <video
+      //     src={'/videos/wms.mp4'}
+      //     autoPlay
+      //     loop
+      //     muted
+      //     playsInline
+      //     className='-z-20 absolute inset-0 w-full h-full object-cover object-center brightness-80'
+      //   /> */}
+      // </div>
     ],
     tech: [
       TECH.NEXT,

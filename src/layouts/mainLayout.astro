@@ -5,31 +5,36 @@ const { content } = Astro.props;
 ---
 
 <html lang="es">
-	
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-		<!-- Google tag (gtag.js) -->
-		<script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-626LY3M7SN"></script>
+		{/* Google tag (gtag.js) */}
+		<script
+			type="text/partytown"
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-626LY3M7SN"></script>
 		<script type="text/partytown">
 			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
 
-			gtag('config', 'G-626LY3M7SN');
+			gtag("config", "G-626LY3M7SN");
 		</script>
-
 
 		<title>Diego Tineo | Full Stack Developer</title>
 
-		<!-- 
+		{
+			/*
 			is:inline:
 				Ejecución Inmediata: Este script decide si la página debe ser oscura o clara mirando el localStorage.
 				Sin Bloqueos: Al estar en el <head> con is:inline, el navegador lo lee y lo ejecuta antes de empezar a dibujar el <body>.
 				Resultado: Si el tema es oscuro, añade la clase .dark al instante. Si no usaras is:inline, Astro movería el script al final de la página. El usuario vería la página en blanco (tema claro) por un milisegundo y de repente "saltaría" a negro cuando el script termine de cargar al final. Ese parpadeo es lo que evitas.
-		-->
+			*/
+		}
 
 		<script is:inline define:vars={{ PREFERED_DEV_THEME }}>
 			const theme = (() => {
@@ -56,11 +61,9 @@ const { content } = Astro.props;
 				document.documentElement.classList.add("dark");
 			}
 		</script>
-		
 	</head>
 
 	<body class="bg-background text-foreground">
-
 		<slot />
 	</body>
 </html>

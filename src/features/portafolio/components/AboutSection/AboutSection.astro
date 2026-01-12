@@ -39,12 +39,12 @@ const highlights = [
     <div class="flex my-6 gap-2">
       <MotionLine client:load />
 
-      <!-- XS/SM/MD: Single column, highlights stacked, then AboutAICard -->
-      <!-- LG: 2-column grid for highlights, then full-width AboutAICard -->
-      <!-- XL: 3-column grid, 2 cols for highlights, 1 col for AboutAICard -->
+      {/* XS/SM/MD: Single column, highlights stacked, then AboutAICard */}
+      {/* LG: 2-column grid for highlights, then full-width AboutAICard */}
+      {/* XL: 3-column grid, 2 cols for highlights, 1 col for AboutAICard */}
       <div class="text-sm mx-auto w-full p-4">
         <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10">
-          <!-- Highlights column(s) -->
+          {/* Highlights column(s) */}
           <div class="lg:col-span-2 xl:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
             {
               highlights.map((highlight) => (
@@ -69,7 +69,7 @@ const highlights = [
             }
           </div>
 
-          <!-- AboutAICard: Full width on XS/SM/MD/LG, side column on XL -->
+          {/* AboutAICard: Full width on XS/SM/MD/LG, side column on XL */}
           <div class="lg:col-span-2 xl:col-span-1">
             <AboutAICard />
           </div>

@@ -1,6 +1,7 @@
 ---
 import ContactButton from "@/shared/components/ContactButtons/ContactButton.astro";
 import { FaGithub, FaLinkedin, FaRegFilePdf } from "react-icons/fa";
+import cvPdf from "@/assets/docs/DIEGO TINEO CV 2026.pdf";
 
 const buttons = [
   {
@@ -19,7 +20,7 @@ const buttons = [
   },
   {
     label: "Curriculum PDF",
-    href: "/cv.pdf",
+    href: cvPdf,
     icon: FaRegFilePdf,
     className: "bg-red-600 text-white border-red-800",
   },
